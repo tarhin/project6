@@ -1,0 +1,2279 @@
+@charset "UTF-8";
+:root {
+  font-size: 1.1111111111vw;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "cannia";
+  src: url("../font/Cannia.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Times New Roman";
+  src: url("../font/Times-New-Romance.ttf") format("truetype");
+  font-display: swap;
+}
+header {
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.03);
+}
+header .header_information {
+  display: flex;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  color: white;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 0.75rem;
+  padding: 0.5rem 0;
+  box-sizing: border-box;
+}
+header .header_information .img_phone {
+  display: block;
+  width: 0.625rem;
+  height: 0.625rem;
+}
+header .header_information .header_information_phone {
+  display: flex;
+  align-items: center;
+  margin-left: 1.25rem;
+}
+header .header_information .header_information_phone p {
+  margin-left: 0.5rem;
+}
+header .header_information > p {
+  margin-left: 1.25rem;
+}
+header .header_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 7.5rem;
+  padding: 0 2.375rem;
+}
+header .header_content .header_logo {
+  display: flex;
+}
+header .header_content .header_logo img {
+  width: 3.375rem;
+  height: 4rem;
+  display: block;
+  margin-right: 0.5rem;
+}
+header .header_content .header_logo h1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  line-height: 1.6;
+  font-family: "Noto Serif JP", "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  vertical-align: middle;
+  text-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.0625rem;
+}
+header .header_content .header_content_menu .header_menu_link {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Noto Serif JP", "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-weight: 800;
+  font-size: 0.875rem;
+}
+header .header_content .header_content_menu .header_menu_link img {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.625rem;
+}
+header .header_content .header_content_menu .header_menu_link > a {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+header .header_content .header_content_menu .header_menu_link .line_link {
+  color: rgb(6, 199, 85);
+  border: rgb(6, 199, 85) 0.0625rem solid;
+  border-radius: 0.3125rem;
+  margin-right: 1rem;
+}
+header .header_content .header_content_menu .header_menu_link .contact_link {
+  color: rgb(249, 137, 121);
+  border: rgb(249, 137, 121) 0.0625rem solid;
+  border-radius: 0.3125rem;
+}
+header .header_content .header_content_menu ul {
+  display: flex;
+  margin-top: 0.625rem;
+  list-style: none;
+  color: rgb(102, 102, 102);
+  font-family: "Noto Serif JP", "游明朝体", "Yu Mincho", "YuMincho", serif;
+  font-size: 1rem;
+  font-weight: 800;
+}
+header .header_content .header_content_menu ul li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+main .slide_image_top_wrapper {
+  overflow: hidden;
+}
+main .slide_image_top {
+  height: 26.25rem;
+  margin: 1.125rem 0 2.5rem 0;
+}
+main .slide_image_top .slick-list.draggable {
+  height: 100%;
+}
+main .slide_image_top .slick-track {
+  height: 100%;
+}
+main .slide_image_top * {
+  overflow: visible;
+}
+main .slide_image_top .slide_content {
+  width: 36.25rem;
+  height: 20rem;
+  margin-left: 8.75rem;
+}
+main .slide_image_top img.slick {
+  display: block;
+  width: 36.25rem;
+  height: 20rem;
+  background-color: rgb(217, 217, 217);
+  border: none;
+  transform-origin: center center;
+  will-change: width, height;
+  transition-duration: 300ms;
+  margin: 3.125rem 0;
+}
+main .slide_image_top .slide_content.slick-center img {
+  transform: scale(1.34);
+  transform-origin: center;
+}
+main .main_recommend_menu {
+  background-color: rgb(255, 249, 245);
+  padding: 5rem 0;
+}
+main .main_recommend_menu h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 13.75rem;
+  font-size: 4rem;
+  font-family: "cannia";
+  font-weight: 400;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8), rgba(102, 83, 40, 0.8));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main .main_recommend_menu .recommend_slide {
+  width: 51.375rem;
+  margin: 5rem auto 0;
+}
+main .main_recommend_menu .recommend_slide_image a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 2.25rem;
+}
+main .main_recommend_menu .recommend_slide_image img {
+  width: 15.625rem;
+  height: 15.625rem;
+}
+main .recommend_prev,
+main .recommend_next,
+main .gallery_prev,
+main .gallery_next,
+main .about_case_pagenation .prev,
+main .about_case_pagenation .next {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: absolute;
+  top: -8.25rem;
+  background-color: white;
+  border: 0.0625rem rgb(192, 157, 123) solid;
+  border-radius: 50%;
+  cursor: pointer;
+}
+main .recommend_prev {
+  right: -2.0625rem;
+}
+main .recommend_prev::before {
+  content: "";
+  display: block;
+  width: 0.5625rem;
+  height: 0.0625rem;
+  position: absolute;
+  top: 1.1875rem;
+  left: 0.9375rem;
+  background-color: rgb(192, 157, 123);
+  transform: rotate(40deg);
+  transform-origin: left;
+}
+main .recommend_prev::after {
+  content: "";
+  display: block;
+  width: 0.5625rem;
+  height: 0.0625rem;
+  position: absolute;
+  top: 1.1875rem;
+  left: 0.9375rem;
+  background-color: rgb(192, 157, 123);
+  transform: rotate(-40deg);
+  transform-origin: left;
+}
+main .gallery_prev,
+main .about_case_pagenation .prev {
+  right: 17.25rem;
+}
+main .gallery_prev::before,
+main .about_case_pagenation .prev::before {
+  content: "";
+  display: block;
+  width: 0.5625rem;
+  height: 0.0625rem;
+  position: absolute;
+  top: 1.1875rem;
+  left: 0.9375rem;
+  background-color: rgb(192, 157, 123);
+  transform: rotate(40deg);
+  transform-origin: left;
+}
+main .gallery_prev::after,
+main .about_case_pagenation .prev::after {
+  content: "";
+  display: block;
+  width: 0.5625rem;
+  height: 0.0625rem;
+  position: absolute;
+  top: 1.1875rem;
+  left: 0.9375rem;
+  background-color: rgb(192, 157, 123);
+  transform: rotate(-40deg);
+  transform-origin: left;
+}
+main .recommend_next::before,
+main .gallery_next::before,
+main .about_case_pagenation .next::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0.5625rem;
+  height: 0.0625rem;
+  background-color: rgb(192, 157, 123);
+  transform: rotate(40deg);
+  transform-origin: right;
+  top: 1.1875rem;
+  right: 0.9375rem;
+}
+main .recommend_next::after,
+main .gallery_next::after,
+main .about_case_pagenation .next::after {
+  content: "";
+  display: block;
+  width: 0.5625rem;
+  height: 0.0625rem;
+  position: absolute;
+  top: 1.1875rem;
+  left: 0.9375rem;
+  background-color: rgb(192, 157, 123);
+  transform: rotate(-40deg);
+  transform-origin: right;
+}
+main .recommend_next,
+main .gallery_next {
+  right: 13.75rem;
+}
+main .recommend_next {
+  right: -5.5625rem;
+}
+main .main_features {
+  position: relative;
+  background: url("../img/feature_bg.png") center/cover no-repeat;
+  padding: 5rem 0;
+}
+main .main_features .feature_content {
+  display: flex;
+  justify-content: space-between;
+  width: 62.5rem;
+  margin: 4rem auto 0;
+}
+main .main_features .feature_content img {
+  width: 26.25rem;
+  height: 16.5rem;
+  border: none;
+  border-radius: 1.25rem;
+}
+main .main_features .feature_content img:nth-of-type(2) {
+  position: absolute;
+}
+main .main_features .feature_content .feature_content_text {
+  width: 29.5rem;
+}
+main .main_features .feature_content h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  font-family: "Noto Serif JP", "Yu Mincho", "游明朝体", serif;
+  color: rgb(173, 127, 82);
+  line-height: 1.6;
+}
+main .main_features .feature_content p {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Noto Serif JP", "Yu Mincho", "游明朝体", serif;
+  color: rgb(102, 102, 102);
+  line-height: 1.6;
+}
+main .main_features .feature_content:not(:nth-of-type(3)) {
+  flex-direction: row-reverse;
+}
+main .main_features .feature_content:nth-of-type(3) {
+  flex-direction: row;
+}
+main .main_features .feature_content:nth-of-type(3) img:nth-of-type(2) {
+  width: 9.6875rem;
+  height: auto;
+  top: 32.1875rem;
+  left: 7.875rem;
+}
+main .main_features .feature_content:nth-of-type(2) img:nth-of-type(2),
+main .main_features .feature_content:nth-of-type(4) img:nth-of-type(2) {
+  width: 13rem;
+  height: auto;
+}
+main .main_features .feature_content:nth-of-type(2) img:nth-of-type(2) {
+  top: 13.125rem;
+  right: 7.125rem;
+}
+main .main_features .feature_content:nth-of-type(4) img:nth-of-type(2) {
+  top: 50.625rem;
+  right: 6.25rem;
+}
+main .main_features h2,
+main .main_concept h2,
+main .main_doctor_top h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 4rem;
+  font-weight: 200;
+  font-family: "cannia";
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.64rem;
+  margin: 0 auto;
+}
+main .main_features h3,
+main .main_concept h3,
+main .main_doctor_top h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.5rem;
+  font-family: "Noto Serif JP", "Yu Mincho", "游明朝体", serif;
+  font-weight: 400;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 1rem auto 0;
+  letter-spacing: 0.24rem;
+}
+main .main_features .features_bar,
+main .main_concept .features_bar,
+main .main_doctor_top .features_bar {
+  width: 5rem;
+  height: 0.0625rem;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  margin: 1rem auto 0 auto;
+}
+main .main_concept {
+  width: 76.25rem;
+  height: 42.875rem;
+  margin: 5rem 0 5rem auto;
+  position: relative;
+}
+main .main_concept .concept_bg_img {
+  position: absolute;
+  background: url("../img/concept_bg.png") center/cover no-repeat;
+  width: 76.25rem;
+  height: 42.875rem;
+  border-radius: 10rem 0 0 0;
+  z-index: 0;
+}
+main .main_concept .concept_bg_color {
+  position: absolute;
+  width: 76.25rem;
+  height: 42.875rem;
+  background-color: rgb(247, 247, 247);
+  border-radius: 10rem 0 0 0;
+  z-index: -1;
+}
+main .main_concept h2 {
+  font-weight: 300;
+}
+main .main_concept img:nth-of-type(1) {
+  position: absolute;
+  top: 1.6875rem;
+  right: 8.0625rem;
+  width: 15.625rem;
+}
+main .main_concept img:nth-of-type(2) {
+  position: absolute;
+  top: 5.25rem;
+  right: 15rem;
+  width: 7.3125rem;
+  transform: rotate(-91.19deg);
+}
+main .main_concept .concept_header {
+  width: 19rem;
+  padding: 5rem 0 0 5rem;
+}
+main .main_concept .concept_text {
+  margin: 4rem 0 0 5rem;
+}
+main .main_concept .concept_text h3 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(173, 127, 82);
+  margin-bottom: 1.5rem;
+  background: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: rgb(173, 127, 82);
+  letter-spacing: 0;
+}
+main .main_concept .concept_text p {
+  width: 57.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Noto Serif JP", "Yu Mincho", "游明朝", serif;
+  color: rgb(102, 102, 102);
+  margin: 0 0 1.5rem 0;
+}
+main .main_concept .concept_text a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26.25rem;
+  height: 4rem;
+  position: relative;
+  border: 0.0625rem solid rgb(173, 127, 82);
+  font-size: 1rem;
+  font-family: "Noto Serif JP", "Yu Mincho", "游明朝体", serif;
+  font-weight: 500;
+  letter-spacing: 0.16rem;
+  color: rgb(102, 102, 102);
+}
+main .main_concept .concept_text a img {
+  position: static;
+  width: 1.625rem;
+  transform: none;
+  margin: 0 0 0 0.625rem;
+}
+main .main_doctor_top {
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  padding: 5rem 0;
+  background: url("../img/doctor_bg.png") center/cover no-repeat;
+}
+main .main_doctor_top .doctor_top_content {
+  width: 62.5rem;
+  margin: 4rem auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+main .main_doctor_top .doctor_top_content img {
+  width: 26.4375rem;
+  flex-shrink: 0;
+}
+main .main_doctor_top .doctor_top_content .doctor_top_content_text h3 {
+  margin: 0;
+  color: rgb(173, 127, 82);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: 0.02rem;
+  background: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: rgb(173, 127, 82);
+}
+main .main_doctor_top .doctor_top_content .doctor_top_content_text p {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: rgb(102, 102, 102);
+  line-height: 1.6;
+}
+main .main_doctor_top .doctor_top_content .doctor_top_content_text h4 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.05625rem;
+  line-height: 2;
+  color: rgb(173, 127, 82);
+  margin: 1.25rem 0 0 0;
+}
+main .main_doctor_top .doctor_top_content .doctor_top_content_text ul {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: rgb(102, 102, 102);
+}
+main .main_doctor_top .doctor_top_content .doctor_top_content_text ul li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 0 0 1.5625rem;
+  line-height: 1.5;
+}
+main .main_doctor_top .doctor_top_content .doctor_top_content_text p {
+  width: 31.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(102, 102, 102);
+  margin: 1.25rem 0 0 0;
+  letter-spacing: 0.05rem;
+  line-height: 1.7;
+}
+main .main_doctor_top .doctor_top_content .doctor_top_content_text .doctor_top_link_media {
+  display: flex;
+  align-items: center;
+  margin: 1.25rem 0 0 0;
+}
+main .main_doctor_top .doctor_top_content .doctor_top_content_text .doctor_top_link_media a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 10.8125rem;
+  height: 2.25rem;
+  border: 0.125rem solid rgb(173, 127, 82);
+  color: rgb(68, 68, 68);
+  font-size: 0.875rem;
+  letter-spacing: 0.035rem;
+  line-height: 1.6;
+  font-weight: 400;
+  padding: 0 1.25rem;
+  border-radius: 0.3125rem;
+  margin-right: 1.5rem;
+}
+main .main_doctor_top .doctor_top_content .doctor_top_content_text .doctor_top_link_media a img {
+  width: 1.625rem;
+}
+main .main_doctor_top .doctor_top_content .doctor_top_content_text > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 26.25rem;
+  height: 4rem;
+  margin: 1rem 0 0 0;
+  background-color: rgb(192, 157, 123);
+  border: 0.0625rem rgb(173, 127, 82) solid;
+  color: white;
+}
+main .main_doctor_top .doctor_top_content .doctor_top_content_text > a img {
+  width: 1.625rem;
+  margin: 0 0 0 0.625rem;
+}
+main .main_menu h2,
+main .main_case_top h2,
+main .main_gallery h2,
+main .main_access h2,
+main .main_calendar h2,
+main .main_price h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 4rem;
+  font-weight: 200;
+  font-family: "cannia";
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.64rem;
+  margin: 0 auto;
+}
+main .main_menu > h3,
+main .main_case_top > h3,
+main .main_gallery > h3,
+main .main_access > h3,
+main .main_calendar > h3,
+main .main_price > h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.5rem;
+  font-family: "Noto Serif JP", "Yu Mincho", "游明朝体", serif;
+  font-weight: 400;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 1rem auto 0;
+  letter-spacing: 0.24rem;
+}
+main .main_menu .features_bar,
+main .main_case_top .features_bar,
+main .main_gallery .features_bar,
+main .main_access .features_bar,
+main .main_calendar .features_bar,
+main .main_price .features_bar {
+  width: 5rem;
+  height: 0.0625rem;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  margin: 1rem auto 0 auto;
+}
+main .main_menu {
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  padding: 5rem 0;
+  background: url("../img/main_menu_bg.png") center/cover no-repeat;
+}
+main .main_menu .menu_content h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 4rem;
+  font-weight: 400;
+  font-family: "cannia";
+  text-shadow: 0 0.1875rem 0.1875rem rgba(0, 0, 0, 0.1);
+  background: linear-gradient(#987F47, #C09D4E 27%, #CAAB66 55%, #987F47);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: rgb(102, 102, 102);
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.64rem;
+}
+main .main_menu .menu_content a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  width: 12.5rem;
+  height: 3.75rem;
+  color: rgb(175, 148, 84);
+  border: 0.0625rem solid rgb(175, 148, 84);
+  border-radius: 2.5rem;
+  font-size: 1rem;
+  letter-spacing: 0.01rem;
+  padding: 0 1rem;
+}
+main .main_menu .menu_content a::after {
+  content: "";
+  width: 0.625rem;
+  height: 0.3125rem;
+  border-top: 0.3125rem transparent solid;
+  border-bottom: 0.3125rem transparent solid;
+  border-left: 0.3125rem solid rgb(175, 148, 84);
+}
+main .main_menu .menu_content .menu_link_wrapper {
+  margin-top: 1.5rem;
+}
+main .main_menu .menu_content:nth-of-type(2),
+main .main_menu .menu_content:nth-of-type(4) {
+  margin: 0 0 0 auto;
+  width: 76.25rem;
+  height: 35rem;
+  padding: 5rem 0 0 2.5rem;
+}
+main .main_menu .menu_content:nth-of-type(3) {
+  margin: 0 auto 0 0;
+  width: 76.25rem;
+  height: 35rem;
+}
+main .main_menu .menu_content:nth-of-type(2) {
+  background: url("../img/main_menu_image1.jpg") center/cover no-repeat;
+  margin-top: 3rem;
+}
+main .main_menu .menu_content:nth-of-type(2) .menu_link_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.3125rem;
+  width: 29.625rem;
+}
+main .main_menu .menu_content:nth-of-type(3) {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: url("../img/main_menu_image2.jpg") center/cover no-repeat;
+  margin-top: 4rem;
+  padding: 5rem 2.5rem 0 0;
+}
+main .main_menu .menu_content:nth-of-type(4) {
+  background: url("../img/main_menu_image3.jpg") center/cover no-repeat;
+  margin-top: 4rem;
+}
+main .main_case_top {
+  background: url("../img/case_bg.jpg") center/cover no-repeat;
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  padding: 4rem 0 5rem;
+}
+main .case_top_content_wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 62.5rem;
+  margin: 3.125rem auto 0;
+}
+main .case_top_content_wrapper .case_top_content,
+main .case_top_content_wrapper .case_link {
+  width: 15rem;
+  padding: 1.875rem 1.25rem 0 1.25rem;
+  background-color: rgb(247, 247, 247);
+  box-sizing: border-box;
+}
+main .case_top_content_wrapper .case_top_content .case_top_content_text:nth-of-type(2),
+main .case_top_content_wrapper .case_link .case_top_content_text:nth-of-type(2) {
+  height: 2.8125rem;
+  margin: 0.625rem 0 0.625rem 0;
+}
+main .case_top_content_wrapper .case_top_content .case_top_content_text:nth-of-type(3),
+main .case_top_content_wrapper .case_link .case_top_content_text:nth-of-type(3) {
+  height: 2.8125rem;
+  margin: 0 0 0.625rem 0;
+}
+main .case_top_content_wrapper .case_top_content .case_top_content_text:nth-of-type(4),
+main .case_top_content_wrapper .case_link .case_top_content_text:nth-of-type(4) {
+  height: 3.1875rem;
+  margin: 0 0 0.625rem 0;
+}
+main .case_top_content_wrapper .case_top_content .case_top_content_text:nth-of-type(5),
+main .case_top_content_wrapper .case_link .case_top_content_text:nth-of-type(5) {
+  height: 2.125rem;
+  margin: 0 0 1.875rem 0;
+}
+main .case_top_content_wrapper .case_top_content h4,
+main .case_top_content_wrapper .case_link h4 {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgb(175, 175, 175);
+  letter-spacing: 0.0375rem;
+}
+main .case_top_content_wrapper .case_top_content p,
+main .case_top_content_wrapper .case_link p {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(77, 77, 77);
+  letter-spacing: 0.04375rem;
+  line-height: 1;
+}
+main .case_top_content_img,
+main .case_link_img,
+main .about_case_img {
+  width: 12.5rem;
+  height: 14rem;
+  border: 0.0625rem rgb(163, 129, 9) solid;
+}
+main .case_top_content_img > div,
+main .case_link_img > div,
+main .about_case_img > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 8.75rem;
+  background-color: white;
+}
+main .case_top_content_img > div p,
+main .case_link_img > div p,
+main .about_case_img > div p {
+  color: rgb(77, 77, 77);
+  margin: 0 0 0.625rem 0;
+}
+main .main_news {
+  padding: 5rem 0;
+}
+main .main_news .news_content {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 81.4375rem;
+  height: 27.5rem;
+  background: url("../img/news_bg.jpg") center/cover no-repeat;
+  margin: 0 0 0 auto;
+  padding: 5rem 13.875rem 0 8rem;
+  border-radius: 10rem 0 0 10rem;
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+}
+main .main_news .news_content .news_content_header {
+  width: 10.4375rem;
+  box-sizing: border-box;
+}
+main .main_news .news_content .news_content_header h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "cannia";
+  font-weight: 300;
+  font-size: 4rem;
+  letter-spacing: 0.64rem;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+main .main_news .news_content .news_content_header h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.5rem;
+  font-family: "Noto Serif JP", "Yu Mincho", "游明朝体", serif;
+  font-weight: 400;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 1rem auto 0;
+  letter-spacing: 0.24rem;
+}
+main .main_news .news_content .news_content_header .features_bar {
+  width: 5rem;
+  height: 0.0625rem;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  margin: 1rem auto 0 auto;
+}
+main .main_news .news_content .news_content_text_wrapper > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 23.75rem;
+  height: 4rem;
+  margin: 2.5rem auto 0;
+  background-color: rgb(192, 157, 123);
+  border: 0.0625rem rgb(173, 127, 82) solid;
+  color: white;
+}
+main .main_news .news_content .news_content_text_wrapper > a img {
+  margin: 0 0 0 0.625rem;
+}
+main .main_news .news_content .news_content_text_wrapper .news_content_text {
+  display: flex;
+  justify-content: space-between;
+  width: 31.9375rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: rgb(51, 51, 51);
+  line-height: 1.6;
+}
+main .main_news .news_content .news_content_text_wrapper .news_content_text h4 {
+  font-family: "cannia";
+  font-weight: 200;
+  color: rgb(102, 102, 102);
+}
+main .main_news .news_content > img {
+  position: absolute;
+}
+main .main_news .news_content > img:nth-of-type(1) {
+  bottom: 2.355625rem;
+  left: 4.5rem;
+  width: 8.75rem;
+  height: 10.1875rem;
+}
+main .main_news .news_content > img:nth-of-type(2) {
+  bottom: 1.5625rem;
+  left: 9.8125rem;
+  width: 5rem;
+  height: 5rem;
+}
+main .main_gallery {
+  padding: 5rem 0;
+  background-color: rgb(255, 249, 245);
+}
+main .main_gallery .gallery_slide {
+  margin: 4rem 0 5rem;
+  position: relative;
+}
+main .main_gallery .gallery_slide_content img {
+  width: 36.25rem;
+  height: 28.75rem;
+  margin-left: 2.5rem;
+}
+main .main_gallery .slick-dots {
+  bottom: -2.5rem;
+  height: 0.9375rem;
+}
+main .main_gallery .slick-dots li {
+  width: 1.5625rem;
+  margin: 0;
+}
+main .main_gallery .slick-dots li button {
+  padding: 0;
+  width: 1.5625rem;
+}
+main .main_gallery .slick-dots li button::before {
+  font-size: 0.625rem;
+}
+main .main_gallery .slick-dots li.slick-active button::before,
+main .main_gallery .slick-dots li:hover button::before {
+  font-size: 0.9375rem;
+  color: rgb(175, 148, 84);
+}
+main .main_gallery .gallery_prev,
+main .main_gallery .gallery_next {
+  top: auto;
+  bottom: -3.75rem;
+}
+main .main_gallery .gallery_prev {
+  left: 33.90625rem;
+}
+main .main_gallery .gallery_next {
+  right: 33.90625rem;
+}
+main .main_access {
+  position: relative;
+  padding: 5rem 0;
+  font-family: "Noto Serif JP", "Yu Mincho", "游明朝体", serif;
+}
+main .main_access .main_access_bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 40.625rem;
+  background: url("../img/access_bg.jpg") center/cover no-repeat;
+  opacity: 40%;
+  z-index: -1;
+}
+main .main_access .access_content_wrapper {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 3.3125rem;
+       column-gap: 3.3125rem;
+  width: 62.5rem;
+  margin: 4rem auto 0;
+}
+main .main_access .access_content_wrapper .access_content {
+  width: 34.375rem;
+}
+main .main_access .access_content_wrapper h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.6;
+  color: rgb(173, 127, 82);
+}
+main .main_access .access_content_wrapper .access_border {
+  width: 34.375rem;
+  height: 0.003125rem;
+  border: 0.0625rem solid rgb(239, 218, 198);
+  margin: 1rem 0;
+}
+main .main_access .access_content_wrapper .access_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .main_access .access_content_wrapper .access_text h4, main .main_access .access_content_wrapper .access_text p {
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.08rem;
+  line-height: 1.6;
+}
+main .main_access .access_content_wrapper .access_text h4 {
+  font-family: "Zen Old Mincho", "Noto Serif JP", "Yu Mincho" serif;
+  color: rgb(173, 127, 82);
+}
+main .main_access .access_content_wrapper .access_text p {
+  width: 27.6875rem;
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  color: rgb(102, 102, 102);
+}
+main .main_access .access_content_wrapper .access_map iframe {
+  width: 24.8125rem;
+  height: 17.6875rem;
+}
+main .main_calendar {
+  padding: 5rem 0;
+}
+main .main_calendar .calendar_content_wrapper {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 2.5rem;
+       column-gap: 2.5rem;
+  margin: 3rem 0 0;
+}
+main .main_calendar .calendar_content_wrapper h3 {
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.06rem;
+  line-height: 1.6;
+  text-align: center;
+  color: rgb(173, 127, 82);
+}
+main .main_calendar .calendar_content_wrapper .calendar-wrap {
+  margin: 1.875rem 0 0 0;
+  width: 34.125rem;
+}
+main .main_calendar .calendar_content_wrapper .calendar {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.035rem;
+  color: rgb(102, 102, 102);
+}
+main .main_calendar .calendar_content_wrapper .calendar td {
+  height: 5.3125rem;
+  border: 0.0625rem solid rgb(204, 204, 204);
+  text-align: center;
+}
+main .main_calendar .calendar_content_wrapper .calendar td > div:nth-of-type(1) {
+  height: 1.375rem;
+  background-color: rgb(255, 249, 245);
+  border-bottom: 0.0625rem solid rgb(204, 204, 204);
+}
+main .main_calendar .calendar_content_wrapper .calendar td > div:nth-of-type(2) {
+  height: 3.9375rem;
+}
+main .main_calendar .calendar_content_wrapper .calendar .sun {
+  color: rgb(165, 42, 42);
+}
+main .main_calendar .calendar_content_wrapper .calendar .sat {
+  color: rgb(100, 149, 237);
+}
+main .main_calendar .calendar_content_wrapper .calendar th.sat {
+  color: rgb(0, 0, 255);
+}
+main .main_booking {
+  background-color: rgb(247, 247, 247);
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  padding: 5rem 0;
+  line-height: 1.6;
+}
+main .main_booking .booking_content {
+  width: 62.5rem;
+  height: 24.5625rem;
+  text-align: center;
+  background: url("../img/booking_bg.png") center/cover no-repeat;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+main .main_booking .booking_content h2, main .main_booking .booking_content h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 600;
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  color: rgb(173, 127, 82);
+  margin: 0 auto;
+  background: transparent;
+  background-clip: content-box;
+  -webkit-text-fill-color: inherit;
+}
+main .main_booking .booking_content h3 {
+  font-size: 2rem;
+}
+main .main_booking .booking_content h2 {
+  font-size: 5rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+main .main_booking .booking_content .booking_content_link {
+  display: flex;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Zen Old Mincho", "Noto Serif JP", "Yu Mincho", serif;
+  letter-spacing: 0.06rem;
+}
+main .main_booking .booking_content .booking_content_link a {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 0.625rem;
+       column-gap: 0.625rem;
+  border-radius: 0.3125rem;
+  padding: 0.5rem 1rem;
+}
+main .main_booking .booking_content .booking_content_link a img {
+  width: 2rem;
+}
+main .main_booking .booking_content .booking_content_link a:nth-of-type(1) {
+  background-color: rgb(6, 199, 85);
+  border: 0.0625rem rgb(6, 199, 85) solid;
+}
+main .main_booking .booking_content .booking_content_link a:nth-of-type(2) {
+  background-color: rgb(249, 137, 121);
+  border: 0.0625rem rgb(249, 137, 121) solid;
+}
+main .main_booking .booking_content .booking_content_link a:nth-of-type(3) {
+  background-color: rgb(251, 199, 51);
+  border: 0.0625rem rgb(251, 199, 51) solid;
+}
+
+footer {
+  width: 100%;
+  height: 54.25rem;
+  color: white;
+  background-color: rgb(102, 102, 102);
+  padding: 5rem 0 0 0;
+}
+footer .footer_content_wrapper {
+  display: flex;
+}
+footer .footer_content_about_wrapper {
+  margin: 0 0 0 13.75rem;
+}
+footer .footer_content_about_wrapper > img {
+  width: 10rem;
+}
+footer .footer_content_about_wrapper .footer_link {
+  display: flex;
+  -moz-column-gap: 0.625rem;
+       column-gap: 0.625rem;
+  margin: 2.5rem 0 0 0;
+  font-family: "Zen Old Mincho", "Noto Serif JP", "Yu Mincho", serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.06rem;
+  line-height: 1.6;
+}
+footer .footer_content_about_wrapper .footer_link a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 0.3125rem;
+       column-gap: 0.3125rem;
+  border: white 0.0625rem solid;
+  border-radius: 0.3125rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+footer .footer_content_about_wrapper .footer_link a img {
+  width: 1.25rem;
+}
+footer .footer_content_about_wrapper .footer_content_about {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1.5rem 0 0 0;
+}
+footer .footer_content_about_wrapper .footer_content_about .footer_about_text {
+  display: flex;
+  width: 34.375rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 1rem 0;
+}
+footer .footer_content_about_wrapper .footer_content_about .footer_about_text h4, footer .footer_content_about_wrapper .footer_content_about .footer_about_text p {
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  font-weight: 200;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+footer .footer_content_about_wrapper .footer_content_about .footer_about_text h4 {
+  letter-spacing: 0.08rem;
+}
+footer .footer_content_about_wrapper .footer_content_about .footer_about_text p {
+  width: 26.6875rem;
+}
+footer .footer_article_wrapper {
+  margin: 1.0625rem 0 0 5.625rem;
+}
+footer .footer_article_wrapper .footer_content_article h3 {
+  font-family: "Times New Roman", "cannia", serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  letter-spacing: 0.225rem;
+}
+footer .footer_article_wrapper .footer_content_article .footer_article {
+  display: flex;
+  width: 17.5rem;
+  margin: 1rem 0 0 0;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+footer .footer_article_wrapper .footer_content_article .footer_article div {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+footer .footer_article_wrapper .footer_content_article .footer_article > div:nth-of-type(1) {
+  width: 9rem;
+}
+footer .footer_article_wrapper .footer_content_article a {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+footer .footer_article_wrapper .footer_content_article a > div {
+  width: 1rem;
+  height: 0.003125rem;
+  border: 0.375rem solid;
+  border-color: transparent transparent transparent white;
+}
+footer .footer_article_wrapper .footer_content_article:nth-of-type(2) {
+  margin: 4.625rem 0 0 0;
+}
+footer .footer_article_wrapper .footer_content_article:nth-of-type(2) .footer_article {
+  width: 21.5rem;
+  justify-content: space-between;
+}
+footer .footer_article_wrapper .footer_content_article:nth-of-type(2) .footer_article > div:nth-of-type(1) {
+  width: 13rem;
+}
+footer .footer_content_copyright {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  font-weight: 200;
+  font-size: 1rem;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6.25rem 0 0 0;
+}
+
+.main_price {
+  padding: 3.375rem 0 5rem 0;
+}
+.main_price .price_header_wrapper {
+  margin: 4.625rem 0 0 0;
+  padding: 5rem 0;
+  background: url("../img/feature_bg.png") center/cover no-repeat;
+}
+.main_price .price_header_content {
+  width: 62.5rem;
+  margin: 0 auto;
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  letter-spacing: 0.08rem;
+  text-align: center;
+}
+.main_price .price_header_content h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main_price .price_header_content h4 {
+  margin: 1.5rem 0 0 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(102, 102, 102);
+  line-height: 1.6;
+}
+.main_price .price_content {
+  width: 62.5rem;
+  margin: 0 auto;
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  line-height: 1;
+}
+.main_price .price_content > div > p {
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.04rem;
+  color: rgb(102, 102, 102);
+  margin: 1.5rem 0 0 0;
+}
+.main_price .price_content > div:nth-of-type(12) table {
+  margin: 1.5rem 0 0 0;
+}
+.main_price .price_content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2.5rem 0 0 0;
+  line-height: 1;
+  vertical-align: middle;
+}
+.main_price .price_content table thead tr {
+  height: 2.5rem;
+  background: rgb(192, 157, 123);
+}
+.main_price .price_content table thead tr td {
+  width: 100%;
+}
+.main_price .price_content table tbody td {
+  width: 15.625rem;
+  height: 6.875rem;
+  border: rgb(204, 204, 204) 0.0625rem solid;
+  font-size: 0.875rem;
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  font-weight: 500;
+  color: rgb(102, 102, 102);
+  text-align: center;
+  letter-spacing: 0.04375rem;
+}
+.main_price .price_content table tbody td span {
+  display: inline-block;
+  line-height: 1.2083333333;
+  font-size: 1.5rem;
+}
+
+.price_link {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(12.8px, 1rem, 24px) clamp(10.4px, 0.8125rem, 19.5px);
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  font-size: clamp(12px, 0.9375rem, 22.5px);
+  color: rgb(192, 157, 123);
+  letter-spacing: clamp(0.48px, 0.0375rem, 0.9px);
+  margin: clamp(32px, 2.5rem, 60px) 0 0 0;
+}
+.price_link a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: clamp(192px, 15rem, 360px);
+  height: clamp(38.4px, 3rem, 72px);
+  border: 0.0625rem solid rgb(192, 157, 123);
+  border-radius: 0.25rem;
+  background-color: white;
+  position: relative;
+  padding: 0 0 0 2.5rem;
+}
+.price_link a div {
+  width: clamp(11.2px, 0.875rem, 21px);
+  height: clamp(1.2px, 0.09375rem, 4.5px);
+  background-color: rgb(192, 157, 123);
+  position: absolute;
+  left: clamp(155.2px, 12.125rem, 291px);
+  border-radius: 9999px;
+}
+.price_link a div::before, .price_link a div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto 0;
+  display: block;
+  width: clamp(5.6px, 0.4375rem, 10.5px);
+  height: clamp(1.2px, 0.09375rem, 10.5px);
+  transform-origin: right;
+  background-color: rgb(192, 157, 123);
+  border-radius: 9999px;
+}
+.price_link a div::before {
+  transform: rotate(45deg);
+}
+.price_link a div::after {
+  transform: rotate(-45deg);
+}
+
+.price_content_title {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  margin: 5rem 0 0 0;
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  line-height: 1;
+}
+.price_content_title > div {
+  display: block;
+  width: 0.1875rem;
+  height: 2.25rem;
+  background: linear-gradient(to bottom, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+}
+.price_content_title h3 {
+  font-weight: 600;
+  font-size: 2.25rem;
+  letter-spacing: 0.36rem;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  vertical-align: middle;
+}
+
+.main_treatment.main_price {
+  padding: 5rem 0 0 0;
+}
+.main_treatment.main_price h2 {
+  display: flex;
+  -moz-column-gap: 5.3125rem;
+       column-gap: 5.3125rem;
+  width: 44.375rem;
+}
+.main_treatment.main_price .treatment_content_wrapper {
+  position: relative;
+  margin: 4rem 0 0 0;
+  padding: 5rem 0;
+}
+.main_treatment.main_price .treatment_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90rem;
+  height: 100%;
+  background: url("../img/treatment_bg.png") top/cover no-repeat;
+  opacity: 0.7;
+  z-index: -1;
+}
+.main_treatment.main_price .treatment_content {
+  margin: 4rem 0 0 13.75rem;
+}
+.main_treatment.main_price .treatment_content h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  font-size: 2.25rem;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main_treatment.main_price .treatment_content .treatment_border {
+  width: 4rem;
+  height: 0.0625rem;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  margin: 1.5rem 0 0 0;
+}
+.main_treatment.main_price .treatment_content a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.main_treatment.main_price .treatment_content .treatment_link {
+  width: 17.5rem;
+  margin: 2.5rem 0 0 0;
+  padding: 0.625rem;
+  background-color: white;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
+}
+.main_treatment.main_price .treatment_content .treatment_link img {
+  width: 16.25rem;
+}
+.main_treatment.main_price .treatment_content .treatment_link p {
+  font-family: "Zen Old Mincho", "Noto Serif JP", "Yu Mincho", serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: center;
+  color: rgb(102, 102, 102);
+}
+.main_treatment.main_price .treatment_content:nth-of-type(2) {
+  margin: 0 0 0 13.75rem;
+}
+.main_treatment.main_price .treatment_content:nth-of-type(3) .treatment_link_wrapper,
+.main_treatment.main_price .treatment_content:nth-of-type(4) .treatment_link_wrapper {
+  display: flex;
+  flex-shrink: 0;
+}
+.main_treatment.main_price .treatment_content:nth-of-type(3) .treatment_link,
+.main_treatment.main_price .treatment_content:nth-of-type(4) .treatment_link {
+  margin: 0;
+}
+.main_treatment.main_price .treatment_content:nth-of-type(3) {
+  width: 62.5rem;
+}
+.main_treatment.main_price .treatment_content:nth-of-type(3) .treatment_link_wrapper {
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+  row-gap: 1.5rem;
+  flex-wrap: wrap;
+  margin: 4.625rem 0 0 0;
+}
+.main_treatment.main_price .treatment_content:nth-of-type(3) .treatment_link_wrapper,
+.main_treatment.main_price .treatment_content:nth-of-type(4) .treatment_link_wrapper {
+  display: flex;
+  flex-shrink: 0;
+}
+.main_treatment.main_price .treatment_content:nth-of-type(4) .treatment_link_wrapper {
+  width: 38.75rem;
+  margin: 2.5rem 0 0 0;
+  -moz-column-gap: 3.75rem;
+       column-gap: 3.75rem;
+}
+
+.main_about_clinic.main_treatment.main_price h2 {
+  display: static;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.main_about_clinic.main_treatment.main_price .about_clinic_content_wrapper {
+  margin: 2.6875rem 0 0 0;
+  padding: 5rem 0;
+  position: relative;
+}
+.main_about_clinic.main_treatment.main_price .about_clinic_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/clinic_bg.png") top/cover no-repeat;
+  z-index: -1;
+}
+.main_about_clinic.main_treatment.main_price .about_clinic_content h3, .main_about_clinic.main_treatment.main_price .about_clinic_content p {
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  line-height: 1.6;
+  letter-spacing: 0.08rem;
+}
+.main_about_clinic.main_treatment.main_price .about_clinic_content h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0 auto;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main_about_clinic.main_treatment.main_price .about_clinic_content p {
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 1.5rem 0 0 0;
+  color: rgb(102, 102, 102);
+  text-align: center;
+}
+.main_about_clinic.main_treatment.main_price .about_clinic_content_wrapper:nth-of-type(3) > h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 4rem;
+  font-weight: 200;
+  font-family: "cannia";
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.64rem;
+  margin: 0 auto;
+}
+.main_about_clinic.main_treatment.main_price .about_clinic_content_wrapper:nth-of-type(3) > h4 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.5rem;
+  font-family: "Noto Serif JP", "Yu Mincho", "游明朝体", serif;
+  font-weight: 400;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 1rem auto 0;
+  letter-spacing: 0.24rem;
+}
+.main_about_clinic.main_treatment.main_price .about_clinic_content_wrapper:nth-of-type(3) .features_bar {
+  width: 5rem;
+  height: 0.0625rem;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  margin: 1rem auto 0 auto;
+}
+.main_about_clinic.main_treatment.main_price .about_clinic_content_wrapper:nth-of-type(3) .about_clinic_content {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 1.875rem;
+       column-gap: 1.875rem;
+  margin: 4rem 0 0 0;
+}
+.main_about_clinic.main_treatment.main_price .about_clinic_content_wrapper:nth-of-type(3) .about_clinic_content h4 {
+  font-family: "Zen Old Mincho", "Yu Mincho", serif;
+  font-weight: 43.75rem;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: rgb(173, 127, 82);
+  text-align: center;
+}
+.main_about_clinic.main_treatment.main_price .about_clinic_content_wrapper:nth-of-type(3) > p {
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  line-height: 1.6;
+  letter-spacing: 0.08rem;
+  font-weight: 500;
+  font-size: 1rem;
+  margin: 1.5rem 0 0 0;
+  color: rgb(102, 102, 102);
+  text-align: center;
+}
+
+.main_case {
+  padding: 5rem 0 0 0;
+}
+.main_case .case_content_wrapper {
+  display: block;
+  padding: clamp(64px, 5rem, 120px) 0 clamp(133.6px, 10.4375rem, 250.5px) 0;
+}
+.main_case .case_content_wrapper .case_content_title {
+  display: flex;
+  align-items: center;
+  width: clamp(160px, 12.5rem, 300px);
+  margin: 0 auto;
+  -moz-column-gap: clamp(19.2px, 1.5rem, 36px);
+       column-gap: clamp(19.2px, 1.5rem, 36px);
+}
+.main_case .case_content_wrapper .case_content_title img {
+  width: clamp(43.2px, 3.375rem, 81px);
+  height: clamp(16px, 1.25rem, 30px);
+}
+.main_case .case_content_wrapper .case_content_title img:nth-of-type(2) {
+  transform: scale(-1, 1);
+}
+.main_case .case_content_wrapper .case_content_title h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  font-size: clamp(25.6px, 2rem, 48px);
+  font-weight: 600;
+  letter-spacing: clamp(1.024px, 0.08rem, 1.92px);
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main_case .case_content_wrapper .case_link_wrapper {
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  flex-wrap: wrap;
+  row-gap: clamp(32px, 2.5rem, 60px);
+}
+.main_case .case_content_wrapper .case_link.case_top_content {
+  padding: 0;
+  background: transparent;
+}
+.main_case .case_content_wrapper .case_link.case_top_content .case_content_text.case_top_content_text {
+  height: clamp(36px, 2.8125rem, 67.5px);
+  margin: clamp(16px, 1.25rem, 30px) 0 0 0;
+}
+.main_case .case_content_wrapper .case_content_pagenation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: clamp(16px, 1.25rem, 30px);
+       column-gap: clamp(16px, 1.25rem, 30px);
+  width: clamp(150.4px, 11.75rem, 282px);
+  margin: clamp(64px, 5rem, 120px) auto 0;
+}
+.main_case .case_content_wrapper .case_content_pagenation > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(173, 127, 82);
+  font-size: clamp(16px, 1.25rem, 30px);
+  letter-spacing: clamp(0.64px, 0.05rem, 1.2px);
+  cursor: pointer;
+  font-family: "cannia", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+}
+.main_case .case_content_wrapper .case_content_pagenation .active,
+.main_case .case_content_wrapper .case_content_pagenation .next {
+  width: clamp(32px, 2.5rem, 60px);
+  height: clamp(32px, 2.5rem, 60px);
+  color: white;
+  background-color: rgb(173, 127, 82);
+  border-radius: 50%;
+  font-size: clamp(14.4px, 1.125rem, 27px);
+  letter-spacing: clamp(0.72px, 0.05625rem, 1.35px);
+}
+.main_case .case_content_wrapper .case_content_pagenation .next {
+  width: clamp(54.4px, 4.25rem, 102px);
+  height: clamp(24px, 1.875rem, 45px);
+  border-radius: 9999px;
+}
+.main_case .case_link_img.case_top_content_img {
+  width: clamp(192px, 15rem, 360px);
+  height: clamp(225.6px, 17.625rem, 423px);
+}
+.main_case .case_link_img.case_top_content_img > div:nth-of-type(2) {
+  background-color: rgb(247, 247, 247);
+}
+
+.main_about_case .about_case_bg {
+  width: 100%;
+  height: clamp(64px, 5rem, 120px);
+  background: url("../img/content_bg_origin.jpg") center/cover no-repeat;
+  opacity: 0.3;
+  margin: clamp(64px, 5rem, 120px) 0 0 0;
+}
+.main_about_case .about_case_content_wrapper {
+  width: clamp(800px, 62.5rem, 1500px);
+  padding: clamp(64px, 5rem, 120px) 0;
+  margin: 0 auto;
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  line-height: 1;
+}
+.main_about_case .about_case_content_wrapper h3 {
+  font-size: clamp(28.8px, 2.25rem, 54px);
+  font-weight: 600;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main_about_case .about_case_content_wrapper .about_case_border {
+  width: 100%;
+  height: clamp(0.8px, 0.0625rem, 1.5px);
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  margin: clamp(6.4px, 0.5rem, 12px) 0 0 0;
+}
+.main_about_case .about_case_content_wrapper .about_case_img_wrapper {
+  width: clamp(352px, 27.5rem, 660px);
+}
+.main_about_case .about_case_content_wrapper .about_case_img_wrapper .about_case_img {
+  width: 100%;
+  height: clamp(395.2px, 30.875rem, 741px);
+}
+.main_about_case .about_case_content_wrapper .about_case_img_wrapper .about_case_img > div {
+  height: clamp(196.8px, 15.375rem, 369px);
+  color: rgb(102, 102, 102);
+}
+.main_about_case .about_case_content_wrapper .about_case_img_wrapper .about_case_img > div p {
+  font-size: clamp(19.68px, 1.5375rem, 36.9px);
+  margin: 0 0 clamp(15.2px, 1.1875rem, 28.5px) 0;
+}
+.main_about_case .about_case_content_wrapper .about_case_img_wrapper .about_case_pagenation {
+  width: clamp(284px, 22.1875rem, 532.5px);
+  height: clamp(64px, 5rem, 120px);
+  position: relative;
+  margin: 0 auto;
+}
+.main_about_case .about_case_content_wrapper .about_case_img_wrapper .about_case_pagenation .prev,
+.main_about_case .about_case_content_wrapper .about_case_img_wrapper .about_case_pagenation .next {
+  top: clamp(16px, 1.25rem, 30px);
+}
+.main_about_case .about_case_content_wrapper .about_case_img_wrapper .about_case_pagenation .prev {
+  left: 0;
+}
+.main_about_case .about_case_content_wrapper .about_case_img_wrapper .about_case_pagenation .next {
+  right: 0;
+}
+.main_about_case .about_case_content_wrapper .about_case_img_wrapper .about_case_pagenation .page_dots {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: clamp(60px, 4.6875rem, 112.5px);
+  height: clamp(12px, 0.9375rem, 22.5px);
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.main_about_case .about_case_content_wrapper .about_case_img_wrapper .about_case_pagenation .page_dots div {
+  border-radius: 50%;
+}
+.main_about_case .about_case_content_wrapper .about_case_img_wrapper .about_case_pagenation .page_dots div:nth-of-type(1) {
+  width: clamp(12px, 0.9375rem, 22.5px);
+  height: clamp(12px, 0.9375rem, 22.5px);
+  background: rgb(175, 148, 84);
+}
+.main_about_case .about_case_content_wrapper .about_case_img_wrapper .about_case_pagenation .page_dots div:nth-of-type(2),
+.main_about_case .about_case_content_wrapper .about_case_img_wrapper .about_case_pagenation .page_dots div:nth-of-type(3) {
+  width: clamp(8px, 0.625rem, 15px);
+  height: clamp(8px, 0.625rem, 15px);
+  background-color: rgb(217, 217, 217);
+}
+.main_about_case .about_case_content_wrapper .about_case_content {
+  display: flex;
+  justify-content: space-between;
+  margin: clamp(32px, 2.5rem, 60px) 0 0 0;
+}
+.main_about_case .about_case_content_wrapper .about_case_content .about_case_text_wrapper {
+  width: clamp(352px, 27.5rem, 660px);
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+}
+.main_about_case .about_case_content_wrapper .about_case_content .about_case_text {
+  line-height: 1;
+  font-weight: 500;
+  padding: clamp(4px, 0.3125rem, 7.5px) 0;
+}
+.main_about_case .about_case_content_wrapper .about_case_content .about_case_text h4 {
+  font-size: clamp(11.2px, 0.875rem, 21px);
+  color: rgb(175, 175, 175);
+  line-height: 1.4285714286;
+  letter-spacing: clamp(0.56px, 0.04375rem, 1.05px);
+}
+.main_about_case .about_case_content_wrapper .about_case_content .about_case_text p {
+  font-size: clamp(12.8px, 1rem, 24px);
+  color: rgb(102, 102, 102);
+  line-height: 1.5;
+  letter-spacing: clamp(0.64px, 0.05rem, 1.2px);
+}
+.main_about_case .about_case_content_wrapper .about_case_content .about_case_border {
+  background: rgb(175, 148, 84);
+  margin: 0;
+}
+.main_about_case .about_case_content_wrapper .about_case_content .about_case_text:not(:nth-of-type(1)) {
+  margin: clamp(12.8px, 1rem, 24px) 0 0 0;
+}
+
+.content_brown_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: clamp(8px, 0.625rem, 15px);
+       column-gap: clamp(8px, 0.625rem, 15px);
+  width: clamp(336px, 26.25rem, 630px);
+  height: clamp(51.2px, 4rem, 96px);
+  margin: clamp(32px, 2.5rem, 60px) auto 0;
+  background-color: rgb(192, 157, 123);
+  border: 0.0625rem rgb(173, 127, 82) solid;
+  color: white;
+}
+.content_brown_button img {
+  width: clamp(20.8px, 1.625rem, 39px);
+  margin: 0;
+  transform: rotate(180deg);
+}
+
+.main_clinic .clinic_header_wrapper {
+  background-image: none;
+  position: relative;
+}
+.main_clinic .clinic_header_wrapper .clinic_header_bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: clamp(166.4px, 13rem, 312px);
+  background: url("../img/content_bg_origin.jpg") center/cover no-repeat;
+  opacity: 30%;
+}
+.main_clinic .clinic_header_content .clinic_link {
+  margin: 0;
+}
+.main_clinic .clinic_header_content .clinic_link a {
+  cursor: pointer;
+}
+.main_clinic .clinic_content_bg {
+  background-color: rgb(255, 249, 245);
+}
+.main_clinic .clinic_content_wrapper {
+  width: clamp(800px, 62.5rem, 1500px);
+  margin: 0 auto;
+  padding: clamp(64px, 5rem, 120px) 0;
+}
+.main_clinic .clinic_content_wrapper .clinic_content_title {
+  margin: 0;
+}
+.main_clinic .clinic_content_wrapper .clinic_content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: clamp(52.8px, 4.125rem, 99px) 0 0 0;
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  line-height: 1;
+}
+.main_clinic .clinic_content_wrapper .clinic_content > img {
+  display: block;
+  width: clamp(400px, 31.25rem, 750px);
+  border-radius: clamp(8px, 0.625rem, 15px);
+}
+.main_clinic .clinic_content_wrapper .clinic_content .clinic_content_text_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: clamp(324px, 25.3125rem, 607.5px);
+}
+.main_clinic .clinic_content_wrapper .clinic_content .clinic_content_text {
+  width: clamp(336px, 26.25rem, 630px);
+}
+.main_clinic .clinic_content_wrapper .clinic_content .clinic_content_text h4 {
+  font-weight: 600;
+  font-size: clamp(14.4px, 1.125rem, 27px);
+  letter-spacing: clamp(2.304px, 0.18rem, 4.32px);
+  color: rgb(173, 127, 82);
+}
+.main_clinic .clinic_content_wrapper .clinic_content .clinic_content_text p {
+  margin: clamp(12.8px, 1rem, 24px) 0 0 0;
+  font-weight: 500;
+  font-size: clamp(12.8px, 1rem, 24px);
+  letter-spacing: clamp(2.048px, 0.16rem, 3.84px);
+  color: rgb(102, 102, 102);
+}
+.main_clinic .clinic_content_wrapper .clinic_content .content_brown_button > img {
+  transform: none;
+}
+
+.main_flow {
+  padding: clamp(48px, 3.75rem, 90px) 0 0 0;
+}
+.main_flow .flow_content_wrapper {
+  position: relative;
+  margin: clamp(64px, 5rem, 120px) 0 0 0;
+  padding: clamp(64px, 5rem, 120px) 0;
+}
+.main_flow .flow_content_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: clamp(1152px, 90rem, 2160px);
+  height: 100%;
+  background: url("../img/content_bg_origin.jpg") center/cover no-repeat;
+  opacity: 30%;
+  z-index: -1;
+}
+.main_flow .flow_content_bgcolor {
+  width: clamp(800px, 62.5rem, 1500px);
+  margin: 0 auto;
+  padding: clamp(32px, 2.5rem, 60px) clamp(64px, 5rem, 120px);
+  background-color: white;
+}
+.main_flow .flow_content {
+  display: flex;
+  width: clamp(800px, 62.5rem, 1500px);
+  -moz-column-gap: clamp(38.4px, 3rem, 72px);
+       column-gap: clamp(38.4px, 3rem, 72px);
+}
+.main_flow .flow_content .flow_content_img {
+  display: flex;
+  align-items: center;
+}
+.main_flow .flow_content .flow_content_img img {
+  width: clamp(160px, 12.5rem, 300px);
+  height: clamp(160px, 12.5rem, 300px);
+  border: clamp(0.8px, 0.0625rem, 1.5px) solid rgb(192, 157, 123);
+  margin: auto 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 clamp(3.2px, 0.25rem, 6px) clamp(3.2px, 0.25rem, 6px) rgba(0, 0, 0, 0.05);
+  background-color: rgb(217, 217, 217);
+}
+.main_flow .flow_content .flow_content_text {
+  width: clamp(520px, 40.625rem, 975px);
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: clamp(19.2px, 1.5rem, 36px);
+}
+.main_flow .flow_content .flow_content_text h3 {
+  font-family: "cannia", sans-serif;
+  font-size: clamp(14.4px, 1.125rem, 27px);
+  font-weight: 400;
+  letter-spacing: clamp(1.152px, 0.09rem, 2.16px);
+  color: rgb(173, 127, 82);
+}
+.main_flow .flow_content .flow_content_text h4 {
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  font-weight: 500;
+  font-size: clamp(19.2px, 1.5rem, 36px);
+  color: rgb(102, 102, 102);
+}
+.main_flow .flow_content .flow_content_text p {
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  font-size: clamp(12.8px, 1rem, 24px);
+  font-weight: 500;
+  line-height: 2;
+  color: rgb(102, 102, 102);
+}
+.main_flow .flow_content .flow_content_text a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: clamp(48px, 3.75rem, 90px);
+  border: clamp(0.8px, 0.0625rem, 1.5px) solid rgb(175, 148, 84);
+  border-radius: 9999px;
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  font-weight: 500;
+  font-size: clamp(12.8px, 1rem, 24px);
+  letter-spacing: clamp(0.128px, 0.01rem, 0.24px);
+  color: rgb(175, 148, 84);
+}
+.main_flow .flow_content .flow_content_text a > div {
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  -moz-column-gap: clamp(8.8px, 0.6875rem, 16.5px);
+       column-gap: clamp(8.8px, 0.6875rem, 16.5px);
+  padding: 0 clamp(12.8px, 1rem, 24px);
+  line-height: 1;
+}
+.main_flow .flow_content .flow_content_text a > div div {
+  width: clamp(3.2px, 0.25rem, 6px);
+  height: clamp(8px, 0.625rem, 15px);
+  background-color: rgb(175, 148, 84);
+  -webkit-clip-path: polygon(15% 5%, 100% 50%, 15% 95%);
+          clip-path: polygon(15% 5%, 100% 50%, 15% 95%);
+}
+.main_flow .flow_polygon {
+  width: clamp(24px, 1.875rem, 45px);
+  height: clamp(19.2px, 1.5rem, 36px);
+  -webkit-clip-path: polygon(0 6.6666666667%, 100% 6.6666666667%, 50% 100%);
+          clip-path: polygon(0 6.6666666667%, 100% 6.6666666667%, 50% 100%);
+  background-color: rgb(175, 148, 84);
+  margin: clamp(16px, 1.25rem, 30px) auto;
+}
+
+.main_aftercare {
+  padding: clamp(64px, 5rem, 120px) 0 0 0;
+}
+.main_aftercare .aftercare_content_wrapper {
+  position: relative;
+  margin: clamp(64px, 5rem, 120px) 0 0 0;
+  padding: clamp(64px, 5rem, 120px) 0;
+}
+.main_aftercare .aftercare_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/content_bg_origin.jpg") center/cover no-repeat;
+  opacity: 30%;
+  z-index: -1;
+}
+.main_aftercare .aftercare_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: clamp(800px, 62.5rem, 1500px);
+  margin: 0 auto;
+}
+.main_aftercare .aftercare_content img {
+  display: block;
+  width: clamp(384px, 30rem, 720px);
+  height: clamp(288px, 22.5rem, 540px);
+  background-color: rgb(217, 217, 217);
+  border-radius: clamp(8px, 0.625rem, 15px);
+}
+.main_aftercare .aftercare_content .aftercare_content_text {
+  width: clamp(352px, 27.5rem, 660px);
+}
+.main_aftercare .aftercare_content .aftercare_content_text h3, .main_aftercare .aftercare_content .aftercare_content_text p {
+  font-weight: 500;
+  line-height: 1.6;
+}
+.main_aftercare .aftercare_content .aftercare_content_text h3 {
+  font-family: "Zen Old Mincho", "Noto Serif JP", serif;
+  font-size: clamp(19.2px, 1.5rem, 36px);
+  color: rgb(173, 127, 82);
+}
+.main_aftercare .aftercare_content .aftercare_content_text .aftercare_border {
+  width: clamp(64px, 5rem, 120px);
+  height: clamp(0.8px, 0.0625rem, 1.5px);
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  margin: clamp(6.4px, 0.5rem, 12px) 0 0 0;
+}
+.main_aftercare .aftercare_content .aftercare_content_text p {
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  font-size: clamp(12.8px, 1rem, 24px);
+  color: rgb(102, 102, 102);
+  margin: clamp(19.2px, 1.5rem, 36px) 0 0 0;
+}
+.main_aftercare .aftercare_content_wrapper:nth-of-type(3) .aftercare_content {
+  flex-direction: row-reverse;
+}
+
+.main_faq {
+  padding: clamp(64px, 5rem, 120px) 0 0 0;
+}
+.main_faq .main_faq_bg {
+  width: 100%;
+  height: clamp(64px, 5rem, 120px);
+  background: url("../img/content_bg_origin.jpg") center/cover no-repeat;
+  margin: clamp(64px, 5rem, 120px) 0 0 0;
+  opacity: 30%;
+}
+.main_faq .faq_content_wrapper {
+  padding: clamp(64px, 5rem, 120px) 0 0 0;
+}
+.main_faq .faq_content {
+  width: clamp(800px, 62.5rem, 1500px);
+  margin: 0 auto clamp(19.2px, 1.5rem, 36px);
+}
+.main_faq .faq_content .question,
+.main_faq .faq_content .answer {
+  display: flex;
+  justify-content: space-between;
+  border-radius: clamp(8px, 0.625rem, 15px);
+}
+.main_faq .faq_content .question .circle,
+.main_faq .faq_content .answer .circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(28.8px, 2.25rem, 54px);
+  height: clamp(28.8px, 2.25rem, 54px);
+  font-family: "cannia", sans-serif;
+  font-size: clamp(12.8px, 1rem, 24px);
+  font-weight: 400;
+  line-height: 1.125;
+  letter-spacing: 0;
+  border-radius: 50%;
+}
+.main_faq .faq_content .question p,
+.main_faq .faq_content .answer p {
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  font-weight: 500;
+  color: rgb(102, 102, 102);
+}
+.main_faq .faq_content .question {
+  padding: clamp(12.8px, 1rem, 24px) clamp(19.2px, 1.5rem, 36px);
+  background-color: rgb(247, 247, 247);
+  align-items: center;
+  cursor: pointer;
+}
+.main_faq .faq_content .question .circle {
+  background-color: rgb(173, 127, 82);
+  color: white;
+}
+.main_faq .faq_content .question p {
+  width: clamp(681.6px, 53.25rem, 1278px);
+  font-size: clamp(12.8px, 1rem, 24px);
+  line-height: 1.7;
+}
+.main_faq .faq_content .question .toggle_button {
+  width: clamp(21.6px, 1.6875rem, 40.5px);
+  height: clamp(21.6px, 1.6875rem, 40.5px);
+  opacity: 1;
+  transition-duration: 600ms;
+  position: relative;
+}
+.main_faq .faq_content .question .toggle_button::before {
+  content: "";
+  display: block;
+  width: clamp(12.8px, 1rem, 24px);
+  height: clamp(1.6px, 0.125rem, 3px);
+  background-color: rgb(173, 127, 82);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.main_faq .faq_content .question .toggle_button.close {
+  opacity: 0;
+}
+.main_faq .faq_content .answer_wrapper {
+  display: flex;
+  flex-direction: column;
+  transform-origin: top;
+  transition: display 500ms ease, transform 500ms ease-out, opacity 500ms ease-out, max-height 500ms ease-out;
+  transition-behavior: allow-discrete;
+  transform: scaleY(1);
+  max-height: 999px;
+  opacity: 1;
+}
+@starting-style {
+  .main_faq .faq_content .answer_wrapper {
+    max-height: 0;
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
+.main_faq .faq_content .answer_wrapper.close {
+  display: none;
+  max-height: 0;
+  transform: scaleY(0);
+  opacity: 0;
+}
+@starting-style {
+  .main_faq .faq_content .answer_wrapper.close {
+    max-height: 9999px;
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+.main_faq .faq_content .answer {
+  margin: clamp(19.2px, 1.5rem, 36px) 0 0 0;
+  padding: 0 clamp(20.8px, 1.625rem, 39px);
+}
+.main_faq .faq_content .answer .circle {
+  border: clamp(0.4px, 0.03125rem, 0.75px) solid rgb(173, 127, 82);
+  color: rgb(173, 127, 82);
+  flex-shrink: 0;
+}
+.main_faq .faq_content .answer p {
+  width: clamp(710.4px, 55.5rem, 1332px);
+  font-size: clamp(11.2px, 0.875rem, 21px);
+  letter-spacing: clamp(0.448px, 0.035rem, 0.84px);
+}
+.main_faq .faq_content .faq_link {
+  margin: clamp(28.8px, 2.25rem, 54px) 0 0 0;
+  justify-content: center;
+}
+.main_faq .faq_content .faq_link a {
+  -moz-column-gap: clamp(19.2px, 1.5rem, 36px);
+       column-gap: clamp(19.2px, 1.5rem, 36px);
+}
+.main_faq .faq_content .faq_link .price_arrow {
+  position: relative;
+  left: auto;
+}
+
+.main_doctor {
+  padding: clamp(64px, 5rem, 120px) 0 0 0;
+}
+.main_doctor .doctor_content_wrapper {
+  position: relative;
+  margin: clamp(64px, 5rem, 120px) 0 0 0;
+  padding: clamp(84px, 6.5625rem, 157.5px) 0 clamp(136px, 10.625rem, 255px) 0;
+}
+.main_doctor .doctor_bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/content_bg_origin.jpg") center/cover transparent;
+  opacity: 0.3;
+  z-index: -1;
+}
+.main_doctor .doctor_content {
+  width: clamp(818.4px, 63.9375rem, 1534.5px);
+  margin: 0 auto;
+  padding: clamp(32px, 2.5rem, 60px);
+  background-color: white;
+}
+.main_doctor .doctor_content h3 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  font-weight: 800;
+  font-size: clamp(19.2px, 1.5rem, 36px);
+  line-height: 1.7;
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main_doctor .doctor_content h4 {
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  font-weight: 500;
+  font-size: clamp(12.8px, 1rem, 24px);
+  line-height: 1;
+  color: #CCCCCC;
+  margin: clamp(19.2px, 1.5rem, 36px) 0 0 0;
+}
+.main_doctor .doctor_content p span {
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  font-size: clamp(28.8px, 2.25rem, 54px);
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: #666666;
+}
+.main_doctor .doctor_content .doctor_border {
+  display: inline-block;
+  width: clamp(64px, 5rem, 120px);
+  height: clamp(1.6px, 0.125rem, 3px);
+  background: linear-gradient(to right, rgba(183, 143, 54, 0.8), rgba(202, 171, 102, 0.8) 45%, rgba(152, 127, 71, 0.8));
+}
+/*# sourceMappingURL=style.css.map */

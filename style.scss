@@ -1,0 +1,2615 @@
+@charset 'utf-8';
+
+:root {
+  font-size: calc(16vw / 14.4);
+}
+
+@function rem($pixel) {
+  @return $pixel / 16 * 1rem;
+}
+
+@function clamp_vw($pixel) {
+  @return clamp(calc($pixel * 0.8px),rem($pixel),calc($pixel * 1.5px));
+}
+
+$gold_gradation: linear-gradient(to right, rgba(183, 143, 54, 80%), rgba(202, 171, 102, 80%) 45%, rgba(152, 127, 71, 80%));
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "cannia";
+  src: url("../font/Cannia.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Times New Roman";
+  src: url("../font/Times-New-Romance.ttf") format("truetype");
+  font-display: swap;
+}
+
+header {
+  box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.03);
+
+  .header_information {
+    display: flex;
+    background: $gold_gradation;
+    color: white;
+    font-family: "Zen Old Mincho",serif;
+    font-size: rem(12);
+    padding: rem(8) 0;
+    box-sizing: border-box;
+
+    .img_phone {
+      display: block;
+      width: rem(10);
+      height: rem(10);
+    }
+
+    .header_information_phone {
+      display: flex;
+      align-items: center;
+      margin-left: rem(20);
+
+      p {
+        margin-left: rem(8);
+      }
+    }
+
+    > p {
+      margin-left: rem(20);
+    }
+  }
+
+  .header_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: rem(120);
+    padding: 0 rem(38);
+
+    .header_logo {
+      display: flex;
+
+      img {
+        width: rem(54);
+        height: rem(64);
+        display: block;
+        margin-right: rem(8);
+      }
+
+      h1 {
+        width: fit-content;
+        line-height: 1.6;
+        font-family: "Noto Serif JP", "游明朝体", "Yu Mincho", "YuMincho", serif;
+        font-size: rem(20);
+        font-weight: 800;
+        background: $gold_gradation;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        vertical-align: middle;
+        text-shadow: 0 rem(2) rem(4) rgba(0, 0, 0, .1);
+        letter-spacing: rem(1);
+      }
+    }
+
+    .header_content_menu {
+
+      .header_menu_link {
+        display: flex;
+        justify-content: flex-end;
+        font-family: "Noto Serif JP", "游明朝体", "Yu Mincho", "YuMincho", serif;
+        font-weight: 800;
+        font-size: rem(14);
+
+        img {
+          display: block;
+          width: rem(20);
+          height: rem(20);
+          margin-right: rem(10);
+        }
+
+        > a {
+          display: flex;
+          align-items: center;
+          padding: rem(8) rem(16);
+        }
+
+        .line_link {
+          color: rgba(6, 199, 85, 1);
+          border: rgba(6, 199, 85, 1) rem(1) solid;
+          border-radius: rem(5);
+          margin-right: rem(16);
+        }
+
+        .contact_link {
+          color: rgba(249, 137, 121);
+          border: rgba(249, 137, 121) rem(1) solid;
+          border-radius: rem(5);
+        }
+      }
+
+      ul {
+        display: flex;
+        margin-top: rem(10);
+        list-style: none;
+        color: rgba(102, 102, 102, 1);
+        font-family: "Noto Serif JP", "游明朝体", "Yu Mincho", "YuMincho", serif;
+        font-size: rem(16);
+        font-weight: 800;
+
+        li:not(:last-child){
+          margin-right: rem(24);
+        }
+      }
+    }
+  }
+}
+
+main {
+
+  .slide_image_top_wrapper {
+    overflow: hidden;
+  }
+
+  .slide_image_top {
+    height: rem(420);
+    margin: rem(18) 0 rem(40) 0;
+
+    .slick-list.draggable {
+      height: 100%;
+    }
+
+    .slick-track {
+      height: 100%;
+    }
+
+    * {
+      overflow: visible;
+    }
+
+    .slide_content {
+      width: rem(580);
+      height: rem(320);
+      margin-left: rem(140);
+    }
+
+    img.slick {
+      display: block;
+      width: rem(580);
+      height: rem(320);
+      background-color: rgba(217, 217, 217, 1);
+      border: none;
+      transform-origin: center center;
+      will-change: width,height;
+      transition-duration: 300ms;
+      margin: rem(50) 0;
+    }
+
+    .slide_content.slick-center {
+
+      img {
+        transform: scale(1.34);
+        transform-origin: center;
+      }
+    }
+  }
+
+  .main_recommend_menu {
+    background-color: rgba(255, 249, 245, 1);
+    padding: rem(80) 0;
+
+    h2 {
+      width: fit-content;
+      padding-left: rem(220);
+      font-size: rem(64);
+      font-family: "cannia";
+      font-weight: 400;
+      background: linear-gradient(to right, rgba(183, 143, 54, .8), rgba(202, 171, 102, .8), rgba(102, 83, 40, .8));
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .recommend_slide {
+      width: rem(822);
+      // margin-top: rem(80);
+      margin: rem(80) auto 0;
+    }
+
+    .recommend_slide_image {
+
+      a {
+        width: fit-content;
+        margin-right: rem(36);
+      }
+
+      img {
+        width: rem(250);
+        height: rem(250); 
+      }
+    }
+  }
+
+  .recommend_prev,
+  .recommend_next,
+  .gallery_prev,
+  .gallery_next,
+  .about_case_pagenation .prev,
+  .about_case_pagenation .next {
+    width: rem(40);
+    height: rem(40);
+    position: absolute;
+    top: rem(-132);
+    background-color: white;
+    border: rem(1) rgba(192, 157, 123, 1) solid;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .recommend_prev {
+    right: rem(-33);
+
+    &::before {
+      content: "";
+      display: block;
+      width: rem(9);
+      height: rem(1);
+      position: absolute;
+      top: rem(19);
+      left: rem(15);
+      background-color: rgba(192, 157, 123, 1);
+      transform: rotate(40deg);
+      transform-origin: left;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: rem(9);
+      height: rem(1);
+      position: absolute;
+      top: rem(19);
+      left: rem(15);
+      background-color: rgba(192, 157, 123, 1);
+      transform: rotate(-40deg);
+      transform-origin: left;
+    }
+  }
+
+    
+    .gallery_prev,
+    .about_case_pagenation .prev {
+      right: rem(276);
+
+      &::before {
+        content: "";
+        display: block;
+        width: rem(9);
+        height: rem(1);
+        position: absolute;
+        top: rem(19);
+        left: rem(15);
+        background-color: rgba(192, 157, 123, 1);
+        transform: rotate(40deg);
+        transform-origin: left;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: rem(9);
+        height: rem(1);
+        position: absolute;
+        top: rem(19);
+        left: rem(15);
+        background-color: rgba(192, 157, 123, 1);
+        transform: rotate(-40deg);
+        transform-origin: left;
+      }
+    }
+
+    .recommend_next,
+    .gallery_next,
+    .about_case_pagenation .next {
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: rem(9);
+        height: rem(1);
+        background-color: rgba(192, 157, 123, 1);
+        transform: rotate(40deg);
+        transform-origin: right;
+        top: rem(19);
+        right: rem(15);
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: rem(9);
+        height: rem(1);
+        position: absolute;
+        top: rem(19);
+        left: rem(15);
+        background-color: rgba(192, 157, 123, 1);
+        transform: rotate(-40deg);
+        transform-origin: right;
+      }
+    }
+
+    .recommend_next,
+    .gallery_next {
+      right: rem(220);
+    }
+
+    .recommend_next {
+      right: rem(-89);
+    }
+
+  .main_features {
+    position: relative;
+    background: url("../img/feature_bg.png") center / cover no-repeat;
+    padding: rem(80) 0;
+
+    .feature_content {
+      display: flex;
+      justify-content: space-between;
+      width: rem(1000);
+      margin: rem(64) auto 0;
+      
+      img {
+        width: rem(420);
+        height: rem(264);
+        border: none;
+        border-radius: rem(20);
+      }
+
+      img:nth-of-type(2) {
+        position: absolute;
+      }
+
+      .feature_content_text {
+        width: rem(472);
+      }
+
+      h4 {
+        font-size: rem(18);
+        font-weight: 600;
+        font-family: "Noto Serif JP", "Yu Mincho", "游明朝体", serif;
+        color: rgba(173, 127, 82, 1);
+        line-height: 1.6;
+      }
+
+      p {
+        margin-top: rem(24);
+        font-size: rem(16);
+        font-weight: 500;
+        font-family: "Noto Serif JP", "Yu Mincho", "游明朝体", serif;
+        color: rgba(102, 102, 102, 1);
+        line-height: 1.6;
+      }
+    }
+
+    .feature_content:not(:nth-of-type(3)) {
+      flex-direction: row-reverse;
+    }
+
+    .feature_content:nth-of-type(3) {
+      flex-direction: row;
+
+      img:nth-of-type(2) {
+        width: rem(155);
+        height: auto;
+        top: rem(515);
+        left: rem(126);
+      }
+    }
+
+    .feature_content:nth-of-type(2),
+    .feature_content:nth-of-type(4) {
+      img:nth-of-type(2) {
+        width: rem(208);
+        height: auto;
+      }
+    }
+
+    .feature_content:nth-of-type(2) {
+      img:nth-of-type(2) {
+        top: rem(210);
+        right: rem(114);
+      }
+    }
+
+    .feature_content:nth-of-type(4) {
+      img:nth-of-type(2) {
+        top: rem(810);
+        right: rem(100);
+      }
+    }
+
+  }
+
+  .main_features,
+  .main_concept,
+  .main_doctor_top {
+
+    h2 {
+      width: fit-content;
+      font-size: rem(64);
+      font-weight: 200;
+      font-family: "cannia";
+      background: $gold_gradation;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: calc(rem(64) * .16);
+      margin: 0 auto;
+    }
+
+    h3 {
+      width: fit-content;
+      font-size: rem(24);
+      font-family: "Noto Serif JP", "Yu Mincho", "游明朝体", serif;
+      font-weight: 400;
+      background: $gold_gradation;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: rem(16) auto 0;
+      letter-spacing: calc(rem(24) * .16);
+    }
+
+    .features_bar {
+      width: rem(80);
+      height: rem(1);
+      background: $gold_gradation;
+      margin: rem(16) auto 0 auto;
+    }
+  }
+
+  .main_concept {
+    width: rem(1220);
+    height: rem(686);
+    margin: rem(80) 0 rem(80) auto;
+    position: relative;
+
+    .concept_bg_img {
+      position: absolute;
+      background: url("../img/concept_bg.png") center / cover no-repeat;
+      width: rem(1220);
+      height: rem(686);
+      border-radius: rem(160) 0 0 0;
+      z-index: 0;
+    }
+
+    .concept_bg_color {
+      position: absolute;
+      width: rem(1220);
+      height: rem(686);
+      background-color: rgba(247, 247, 247, 1);
+      border-radius: rem(160) 0 0 0;
+      z-index: -1;
+    }
+
+    h2 {
+      font-weight: 300;
+    }
+
+    img:nth-of-type(1) {
+      position: absolute;
+      top: rem(27);
+      right: rem(129);
+      width: rem(250);
+    }
+
+    img:nth-of-type(2) {
+      position: absolute;
+      top: rem(84);
+      right: rem(240);
+      width: rem(117);
+      transform: rotate(-91.19deg);
+    }
+
+    .concept_header{
+      width: rem(304);
+      padding: rem(80) 0 0 rem(80);
+    }
+
+    .concept_text {
+      margin: rem(64) 0 0 rem(80);
+
+      h3 {
+        margin: 0;
+        font-size: rem(32);
+        font-weight: 600;
+        color: rgba(173, 127, 82, 1);
+        margin-bottom: rem(24);
+        background: transparent;
+        background-clip: text;
+        -webkit-text-fill-color: rgba(173, 127, 82, 1);
+        letter-spacing: 0;
+      }
+
+      p {
+        width: rem(920);
+        font-size: rem(16);
+        font-weight: 500;
+        font-family: "Noto Serif JP", "Yu Mincho", "游明朝", serif;
+        color: rgba(102, 102, 102, 1);
+        margin: 0 0 rem(24) 0;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: rem(420);
+        height: rem(64);
+        position: relative;
+        border: rem(1) solid rgba(173, 127, 82, 1);
+        font-size: rem(16);
+        font-family: "Noto Serif JP", "Yu Mincho", "游明朝体", serif;
+        font-weight: 500;
+        letter-spacing: calc(rem(16) * .16);
+        color: rgba(102, 102, 102, 1);
+  
+        img {
+          position: static;
+          width: rem(26);
+          transform: none;
+          margin: 0 0 0 rem(10);
+        }
+      }  
+    }
+
+  }
+
+  .main_doctor_top {
+    font-family: "Noto Serif JP", "Yu Mincho", serif;
+
+    padding: rem(80) 0;
+    background: url("../img/doctor_bg.png") center / cover no-repeat;
+
+    .doctor_top_content {
+      width: rem(1000);
+      margin: rem(64) auto 0;
+      display: flex;
+      justify-content: space-between;
+
+      img {
+        width: rem(423);
+        flex-shrink: 0;
+      }
+
+      .doctor_top_content_text {
+        h3 {
+          margin: 0;
+          color: rgba(173, 127, 82, 1);
+          font-size: rem(24);
+          font-weight: 500;
+          line-height: 1.7;
+          letter-spacing: rem(.32);
+          background: transparent;
+          background-clip: text;
+          -webkit-text-fill-color: rgba(173, 127, 82, 1);
+        }
+
+        p {
+          font-size: rem(36);
+          font-weight: 600;
+          color: rgba(102, 102, 102, 1);
+          line-height: 1.6;
+        }
+
+        h4 {
+          width: fit-content;
+          font-size: rem(18);
+          font-weight: 600;
+          letter-spacing: calc(rem(18) * .05);
+          line-height: 2;
+          color: rgba(173, 127, 82, 1);
+          margin: rem(20) 0 0 0;
+        }
+
+        ul {
+          width: fit-content;
+          color: rgba(102, 102, 102, 1);
+
+          li {
+            width: fit-content;
+            margin: 0 0 0 rem(25);
+            line-height: 1.5;
+          }
+        }
+
+        p {
+          width: rem(500);
+          font-size: rem(16);
+          font-weight: 500;
+          color: rgba(102, 102, 102, 1);
+          margin: rem(20) 0 0 0;
+          letter-spacing: calc(rem(16) * .05);
+          line-height: 1.7;
+        }
+
+        .doctor_top_link_media {
+          display: flex;
+          align-items: center;
+          margin: rem(20) 0 0 0;
+
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: rem(173);
+            height: rem(36);
+            border: rem(2) solid rgba(173, 127, 82, 1);
+            color: rgba(68, 68, 68, 1);
+            font-size: rem(14);
+            letter-spacing: calc(rem(14) * .04);
+            line-height: 1.6;
+            font-weight: 400;
+            padding: 0 rem(20);
+            border-radius: rem(5);
+            margin-right: rem(24);
+
+            img {
+              width: rem(26);
+            }
+          }
+        }
+
+        > a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: rem(420);
+          height: rem(64);
+          margin: rem(16) 0 0 0;
+          background-color: rgba(192, 157, 123, 1);
+          border: rem(1) rgba(173, 127, 82, 1) solid;
+          color: white;
+
+          img {
+            width: rem(26);
+            margin: 0 0 0 rem(10);
+          }
+        }
+      }
+    }
+  }
+
+  .main_menu,
+  .main_case_top,
+  .main_gallery,
+  .main_access,
+  .main_calendar,
+  .main_price {
+    h2 {
+      width: fit-content;
+      font-size: rem(64);
+      font-weight: 200;
+      font-family: "cannia";
+      background: $gold_gradation;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: calc(rem(64) * .16);
+      margin: 0 auto;
+    }
+
+    > h3 {
+      width: fit-content;
+      font-size: rem(24);
+      font-family: "Noto Serif JP", "Yu Mincho", "游明朝体", serif;
+      font-weight: 400;
+      background: $gold_gradation;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: rem(16) auto 0;
+      letter-spacing: calc(rem(24) * .16);
+    }
+
+    .features_bar {
+      width: rem(80);
+      height: rem(1);
+      background: $gold_gradation;
+      margin: rem(16) auto 0 auto;
+    }
+  }
+
+  .main_menu {
+    font-family: "Noto Serif JP", "Yu Mincho", serif;
+    padding: rem(80) 0;
+    background: url("../img/main_menu_bg.png") center / cover no-repeat;
+
+    .menu_content {
+      h3 {
+        width: fit-content;
+        font-size: rem(64);
+        font-weight: 400;
+        font-family: "cannia";
+        text-shadow: 0 rem(3) rem(3) rgba(0, 0, 0, .1);
+        background: linear-gradient(#987F47, #C09D4E 27%, #CAAB66 55%, #987F47);
+        background-clip: text;
+        color: rgba(102, 102, 102, 1);
+        -webkit-text-fill-color: transparent;
+        letter-spacing: calc(rem(64 * .16));
+      }
+
+      a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+        width: rem(200);
+        height: rem(60);
+        color: rgba(175, 148, 84, 1);
+        border: rem(1) solid rgba(175, 148, 84, 1);
+        border-radius: rem(40);
+        font-size: rem(16);
+        letter-spacing: calc(rem(16) * .01);
+        padding: 0 rem(16);
+
+        &::after {
+          content: "";
+          width: rem(10);
+          height: rem(5);
+          border-top: rem(5) transparent solid;
+          border-bottom: rem(5) transparent solid;
+          border-left: rem(5) solid rgba(175, 148, 84, 1);
+        }
+      }
+
+      .menu_link_wrapper {
+        margin-top: rem(24);
+      }
+    }
+
+    .menu_content:nth-of-type(2),
+    .menu_content:nth-of-type(4) {
+      margin: 0 0 0 auto;
+      width: rem(1220);
+      height: rem(560);
+      padding: rem(80) 0 0 rem(40);
+    }
+
+    .menu_content:nth-of-type(3) {
+      margin: 0 auto 0 0;
+      width: rem(1220);
+      height: rem(560);
+    }
+
+    .menu_content:nth-of-type(2) {
+      background: url("../img/main_menu_image1.jpg") center / cover no-repeat;
+      margin-top: rem(48);
+
+      .menu_link_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: rem(16) rem(21);
+        width: rem(474);
+      }
+    }
+
+    .menu_content:nth-of-type(3) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      background: url("../img/main_menu_image2.jpg") center / cover no-repeat;
+      margin-top: rem(64);
+      padding: rem(80) rem(40) 0 0;
+    }
+
+    .menu_content:nth-of-type(4) {
+      background: url("../img/main_menu_image3.jpg") center / cover no-repeat;
+      margin-top: rem(64);
+    }
+  }
+
+  .main_case_top {
+    background: url("../img/case_bg.jpg") center / cover no-repeat;
+    font-family: "Noto Serif JP", "Yu Mincho", serif;
+    padding: rem(64) 0 rem(80);
+  }
+
+  .case_top_content_wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: rem(1000);
+    margin: rem(50) auto 0;
+
+    .case_top_content,
+    .case_link {
+      width: rem(240);
+      padding: rem(30) rem(20) 0 rem(20);
+      background-color: rgba(247, 247, 247, 1);
+      box-sizing: border-box;
+
+      .case_top_content_text:nth-of-type(2) {
+        height: rem(45);
+        margin: rem(10) 0 rem(10) 0;
+      }
+
+      .case_top_content_text:nth-of-type(3) {
+        height: rem(45);
+        margin: 0 0 rem(10) 0;
+      }
+
+      .case_top_content_text:nth-of-type(4) {
+        height: rem(51);
+        margin: 0 0 rem(10) 0;
+      }
+
+      .case_top_content_text:nth-of-type(5) {
+        height: rem(34);
+        margin: 0 0 rem(30) 0;
+      }
+
+      h4 {
+        font-size: rem(12);
+        font-weight: 500;
+        color: rgba(175, 175, 175, 1);
+        letter-spacing: calc(rem(12) * .05);
+      }
+
+      p {
+        font-size: rem(14);
+        font-weight: 500;
+        color: rgba(77, 77, 77, 1);
+        letter-spacing: calc(rem(14) * 0.05);
+        line-height: 1;
+      }
+    }
+  }
+
+  .case_top_content_img,
+  .case_link_img,
+  .about_case_img {
+    width: rem(200);
+    height: rem(224);
+    border: rem(1) rgba(163, 129, 9, 1) solid;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      height: rem(140);
+      background-color: white;
+
+      p {
+        color: rgba(77, 77, 77, 1);
+        margin: 0 0 rem(10) 0;
+      }
+    }
+  }
+
+  .main_news {
+    padding: rem(80) 0;
+
+    .news_content {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      width: rem(1303);
+      height: rem(440);
+      background: url("../img/news_bg.jpg") center / cover no-repeat;
+      margin: 0 0 0 auto;
+      padding: rem(80) rem(222) 0 rem(128);
+      border-radius: rem(160) 0 0 rem(160);
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+
+      .news_content_header {
+        width: rem(167);
+        box-sizing: border-box;
+
+        h2 {
+          width: fit-content;
+          font-family: "cannia";
+          font-weight: 300;
+          font-size: rem(64);
+          letter-spacing: calc(rem(64) * .16);
+          background: $gold_gradation;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        h3 {
+          width: fit-content;
+          font-size: rem(24);
+          font-family: "Noto Serif JP", "Yu Mincho", "游明朝体", serif;
+          font-weight: 400;
+          background: $gold_gradation;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin: rem(16) auto 0;
+          letter-spacing: calc(rem(24) * .16);
+        }
+    
+        .features_bar {
+          width: rem(80);
+          height: rem(1);
+          background: $gold_gradation;
+          margin: rem(16) auto 0 auto;
+        }
+      }
+
+      .news_content_text_wrapper {
+        > a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: rem(380);
+          height: rem(64);
+          margin: rem(40) auto 0;
+          background-color: rgba(192, 157, 123, 1);
+          border: rem(1) rgba(173, 127, 82, 1) solid;
+          color: white;
+
+          img {
+            margin: 0 0 0 rem(10);
+          }
+        }
+
+        .news_content_text {
+          display: flex;
+          justify-content: space-between;
+          width: rem(511);
+          margin-bottom: rem(24);
+          font-size: rem(16);
+          color: rgba(51, 51, 51, 1);
+          line-height: 1.6;
+
+          h4 {
+            font-family: "cannia";
+            font-weight: 200;
+            color: rgba(102, 102, 102, 1);
+          }
+        }
+      }
+
+      > img {
+        position: absolute;
+      }
+
+      > img:nth-of-type(1) {
+        bottom: rem(37.69);
+        left: rem(72);
+        width: rem(140);
+        height: rem(163);
+      }
+
+      > img:nth-of-type(2) {
+        bottom: rem(25);
+        left: rem(157);
+        width: rem(80);
+        height: rem(80);
+      }
+    }
+  }
+
+  .main_gallery {
+    padding: rem(80) 0;
+    background-color: rgba(255, 249, 245, 1);
+
+    .gallery_slide {
+      margin: rem(64) 0 rem(80);
+      position: relative;
+    }
+
+    .gallery_slide_content {
+      img {
+        width: rem(580);
+        height: rem(460);
+        margin-left: rem(40);
+      }
+    }
+
+    .slick-dots {
+      bottom: rem(-40);
+      height: rem(15);
+
+      li {
+        width: rem(25);
+        margin: 0;
+
+        button {
+          padding: 0;
+          width: rem(25);
+
+          &::before {
+            font-size: rem(10);
+          }
+        }
+      }
+
+      li.slick-active,
+      li:hover {
+        button {
+          &::before {
+            font-size: rem(15);
+            color: rgba(175, 148, 84, 1);
+          }
+        }
+      }
+    }
+
+    .gallery_prev,
+    .gallery_next {
+      top: auto;
+      bottom: rem(-60);
+    }
+
+    .gallery_prev {
+      left: rem(542.5);
+    }
+
+    .gallery_next {
+      right: rem(542.5);
+    }
+  }
+
+  .main_access {
+    position: relative;
+    padding: rem(80) 0;
+    font-family: "Noto Serif JP", "Yu Mincho", "游明朝体", serif;
+
+    .main_access_bg {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: rem(650);
+      background: url("../img/access_bg.jpg") center / cover no-repeat;
+      opacity: 40%;
+      z-index: -1;
+    }
+
+    .access_content_wrapper {
+      display: flex;
+      align-items: center;
+      column-gap: rem(53);
+      width: rem(1000);
+      margin: rem(64) auto 0;
+
+      .access_content {
+        width: rem(550);
+      }
+
+      h3 {
+        font-size: rem(20);
+        font-weight: 800;
+        line-height: 1.6;
+        color: rgba(173, 127, 82, 1);
+      }
+
+      .access_border {
+        width: rem(550);
+        height: rem(.05);
+        border: rem(1) solid rgba(239, 218, 198, 1);
+        margin: rem(16) 0;
+      }
+
+      .access_text {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h4,p{
+          font-weight: 700;
+          font-size: rem(16);
+          letter-spacing: calc(rem(16) * .08);
+          line-height: 1.6;
+        }
+
+        h4 {
+          font-family: "Zen Old Mincho", "Noto Serif JP", "Yu Mincho" serif;
+          color: rgba(173, 127, 82, 1);
+        }
+
+        p {
+          width: rem(443);
+          font-family: "Noto Serif JP", "Yu Mincho", serif;
+          color: rgba(102, 102, 102, 1);
+        }
+      }
+
+      .access_map {
+        iframe {
+          width: rem(397);
+          height: rem(283);
+        }
+      }
+    }
+  }
+
+  .main_calendar {
+    padding: rem(80) 0;
+
+    .calendar_content_wrapper {
+      display: flex;
+      justify-content: center;
+      column-gap: rem(40);
+      margin: rem(48) 0 0;
+
+      h3 {
+        font-family: "Noto Serif JP", "Yu Mincho", serif;
+        font-size: rem(24);
+        font-weight: 800;
+        letter-spacing: calc(rem(24) * .04);
+        line-height: 1.6;
+        text-align: center;
+        color: rgba(173, 127, 82, 1)
+      }
+
+      .calendar-wrap {
+        margin: rem(30) 0 0 0;
+        width: rem(546);
+      }
+
+      .calendar {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: rem(14);
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-weight: 700;
+        line-height: 1.6;
+        letter-spacing: calc(rem(14) * .04);
+        color: rgba(102, 102, 102, 1);
+
+        td {
+          height: rem(85);
+          border: rem(1) solid rgba(204, 204, 204, 1);
+          text-align: center;
+        }
+
+        td > div:nth-of-type(1) {
+          height: rem(22);
+          background-color: rgba(255, 249, 245, 1);
+          border-bottom: rem(1) solid rgba(204, 204, 204, 1);
+        }
+
+        td > div:nth-of-type(2) {
+          height: rem(63);
+        }
+      }
+
+      .calendar .sun {
+        color: rgba(165, 42, 42, 1);
+      }
+      .calendar .sat {
+        color: rgba(100, 149, 237, 1);
+      }
+      .calendar th.sat {
+        color: rgba(0, 0, 255, 1);
+      }
+    }
+  }
+
+  .main_booking {
+    background-color: rgba(247, 247, 247, 1);
+    font-family: "Noto Serif JP", "Yu Mincho", serif;
+    padding: rem(80) 0;
+    line-height: 1.6;
+
+
+    .booking_content {
+      width: rem(1000);
+      height: rem(393);
+      text-align: center;
+      background: url("../img/booking_bg.png") center / cover no-repeat;
+      margin: 0 auto;
+      padding: rem(64) 0;
+
+      h2,h3 {
+        width: fit-content;
+        font-weight: 600;
+        font-family: "Yu Mincho", "Noto Serif JP", serif;
+        color: rgba(173, 127, 82, 1);
+        margin: 0 auto;
+        background: transparent;
+        background-clip: content-box;
+        -webkit-text-fill-color: inherit;
+      }
+
+      h3 {
+        font-size: rem(32);
+      }
+
+      h2 {
+        font-size: rem(80);
+        font-weight: 500;
+        letter-spacing: 0;
+      }
+
+      .booking_content_link {
+        display: flex;
+        column-gap: rem(8);
+        justify-content: center;
+        color: white;
+        font-size: rem(24);
+        font-weight: 700;
+        font-family: "Zen Old Mincho", "Noto Serif JP", "Yu Mincho", serif;
+        letter-spacing: calc(rem(24) * .04);
+        
+        a {
+          display: flex;
+          align-items: center;
+          column-gap: rem(10);
+          border-radius: rem(5);
+          padding: rem(8) rem(16);
+
+          img {
+            width: rem(32);
+          }
+        }
+
+        a:nth-of-type(1) {
+          background-color: rgba(6, 199, 85, 1);
+          border: rem(1) rgba(6, 199, 85, 1) solid;
+        }
+
+        a:nth-of-type(2) {
+          background-color: rgba(249, 137, 121, 1);
+          border: rem(1) rgba(249, 137, 121, 1) solid;
+        }
+
+        a:nth-of-type(3) {
+          background-color: rgba(251, 199, 51, 1);
+          border: rem(1) rgba(251, 199, 51, 1) solid;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  
+  width: 100%;
+  height: rem(868);
+  color: white;
+  background-color: rgba(102, 102, 102, 1);
+  padding: rem(80) 0 0 0;
+
+  .footer_content_wrapper {
+    display: flex;
+  }
+
+  .footer_content_about_wrapper {
+    margin: 0 0 0 rem(220);
+
+    > img {
+      width: rem(160);
+    }
+
+    .footer_link {
+      display: flex;
+      column-gap: rem(10);
+      margin: rem(40) 0 0 0;
+      font-family: "Zen Old Mincho", "Noto Serif JP", "Yu Mincho", serif;
+      font-weight: 700;
+      font-size: rem(14);
+      letter-spacing: calc(rem(24) * .04);
+      line-height: 1.6;
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: rem(5);
+        border: white rem(1) solid;
+        border-radius: rem(5);
+        padding: rem(8);
+        box-sizing: border-box;
+
+        img {
+          width: rem(20);
+        }
+      }
+    }
+
+    .footer_content_about {
+      width: fit-content;
+      margin: rem(24) 0 0 0;
+
+      .footer_about_text {
+        display: flex;
+        width: rem(550);
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 rem(16) 0;
+
+        h4,p{
+          font-family: "Yu Mincho", "Noto Serif JP", serif;
+          font-weight: 200;
+          font-size: rem(16);
+          line-height: 1.6;
+        }
+
+        h4 {
+          letter-spacing: calc(rem(16) * .08);
+        }
+        p {
+          width: rem(427);
+        }
+      }
+    }
+  }
+
+  .footer_article_wrapper {
+    margin: rem(17) 0 0 rem(90);
+
+    .footer_content_article {
+      h3 {
+        font-family: "Times New Roman", "cannia", serif;
+        font-size: rem(36);
+        font-weight: 400;
+        letter-spacing: calc(rem(36) * .1);
+      }
+
+      .footer_article {
+        display: flex;
+        width: rem(280);
+        margin: rem(16) 0 0 0;
+        column-gap: rem(24);
+
+        div {
+          display: flex;
+          flex-shrink: 0;
+          flex-direction: column;
+          row-gap: rem(8);
+        }
+
+        > div:nth-of-type(1) {
+          width: rem(144);
+        }
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        font-family: "Yu Mincho", "Noto Serif JP", serif;
+        font-size: rem(16);
+        font-weight: 500;
+        line-height: 1.6;
+
+        > div {
+          width: rem(16);
+          height: rem(.05);
+          border: rem(6) solid;
+          border-color: transparent transparent transparent white;
+        }
+      }
+    }
+
+    .footer_content_article:nth-of-type(2) {
+      margin: rem(74) 0 0 0;
+
+      .footer_article {
+        width: rem(344);
+        justify-content: space-between;
+
+        > div:nth-of-type(1) {
+          width: rem(208);
+        }
+      }
+    }
+  }
+
+  .footer_content_copyright {
+    width: 100%;
+    height: fit-content;
+    font-family: "Yu Mincho", "Noto Serif JP", serif;
+    font-weight: 200;
+    font-size: rem(16);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: rem(100) 0 0 0;
+  }
+}
+
+
+
+// Priceページ
+
+.main_price {
+  padding: rem(54) 0 rem(80) 0;
+
+  .price_header_wrapper {
+    margin: rem(74) 0 0 0;
+    padding: rem(80) 0;
+    background: url('../img/feature_bg.png') center / cover no-repeat;
+  }
+
+  .price_header_content {
+    width: rem(1000);
+    margin: 0 auto;
+    font-family: "Noto Serif JP", "Yu Mincho", serif;
+    letter-spacing: calc(rem(32) * .04);
+    text-align: center;
+
+    h3 {
+      font-size: rem(32);
+      font-weight: 600;
+      background: $gold_gradation;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h4 {
+      margin: rem(24) 0 0 0;
+      font-size: rem(16);
+      font-weight: 500;
+      color: rgba(102, 102, 102, 1);
+      line-height: 1.6;
+    }
+  }
+
+  .price_content {
+    width: rem(1000);
+    margin: 0 auto;
+    font-family: "Yu Mincho", "Noto Serif JP", serif;
+    line-height: 1;
+
+    > div {
+      > p {
+        font-size: rem(16);
+        line-height: 1.6;
+        letter-spacing: calc(rem(16) * .04);
+        color: rgba(102, 102, 102, 1);
+        margin: rem(24) 0 0 0;
+      }
+    }
+
+    > div:nth-of-type(12) {
+
+      table {
+        margin: rem(24) 0 0 0;
+      }
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: rem(40) 0 0 0;
+      line-height: 1;
+      vertical-align: middle;
+
+      thead {
+        tr {
+          height: rem(40);
+          background: rgba(192, 157, 123, 1);  
+
+          td {
+            width: 100%;
+          }
+        }
+      }
+
+      tbody {
+
+        td {
+          width: rem(250);
+          height: rem(110);
+          border: rgba(204, 204, 204, 1) rem(1) solid;
+          font-size: rem(14);
+          font-family: "Noto Serif JP", "Yu Mincho", serif;
+          font-weight: 500;
+          color: rgba(102, 102, 102, 1);
+          text-align: center;
+          letter-spacing: calc(rem(14) * .05);
+
+          span {
+            display: inline-block;
+            line-height: calc(29 / 24);
+            font-size: rem(24);
+          }
+        }
+      }
+    }
+
+  }
+}
+
+.price_link {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp_vw(16) clamp_vw(13);
+  font-family: "Noto Serif JP", "Yu Mincho", serif;
+  font-size: clamp_vw(15);
+  color: rgba(192, 157, 123, 1);
+  letter-spacing: clamp_vw(15 * .04);
+  margin: clamp_vw(40) 0 0 0;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: clamp(calc(240px * .8),rem(240),calc(240px * 1.5));
+    height: clamp(calc(48px * .8),rem(48),calc(48px *1.5));
+    border: rem(1) solid rgba(192, 157, 123, 1);
+    border-radius: rem(4);
+    background-color: white;
+    position: relative;
+    padding: 0 0 0 rem(40);
+
+    div {
+      width: clamp(calc(14px * .8),rem(14),calc(14px * 1.5));
+      height: clamp(calc(1.5px * .8),rem(1.5),calc(3px * 1.5));
+      background-color: rgba(192, 157, 123, 1);
+      position: absolute;
+      left: clamp_vw(194);
+      border-radius: 9999px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto 0;
+        display: block;
+        width: clamp(calc(7px * 0.8),rem(7),calc(7px * 1.5));
+        height: clamp(calc(1.5px * 0.8),rem(1.5),calc(7px * 1.5));
+        transform-origin: right;
+        background-color: rgba(192, 157, 123, 1);
+        border-radius: 9999px;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+
+.price_content_title {
+  display: flex;
+  column-gap: rem(16);
+  margin: rem(80) 0 0 0;
+  font-family: "Yu Mincho", "Noto Serif JP", serif;
+  line-height: 1;
+
+  > div {
+    display: block;
+    width: rem(3);
+    height: rem(36);
+    background: linear-gradient(to bottom, rgba(183, 143, 54, 80%), rgba(202, 171, 102, 80%) 45%, rgba(152, 127, 71, 80%));
+  }
+
+  h3 {
+    font-weight: 600;
+    font-size: rem(36);
+    letter-spacing: calc(rem(36) * .16);
+    background: $gold_gradation;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    vertical-align: middle;
+  }
+}
+
+//施術一覧ページ
+
+.main_treatment.main_price {
+  padding: rem(80) 0 0 0;
+
+  h2 {
+    display: flex;
+    column-gap: rem(85);
+    width: rem(710);
+  }
+
+  .treatment_content_wrapper {
+    position: relative;
+    margin: rem(64) 0 0 0;
+    padding: rem(80) 0;
+  }
+
+  .treatment_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem(1440);
+    height: 100%;
+    background: url("../img/treatment_bg.png") top / cover no-repeat;
+    opacity: .7;
+    z-index: -1;
+  }
+
+  .treatment_content {
+    margin: rem(64) 0 0 rem(220);
+
+    h3 {
+      width: fit-content;
+      font-family: "Yu Mincho", "Noto Serif JP", serif;
+      font-size: rem(36);
+      background: $gold_gradation;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .treatment_border {
+      width: rem(64);
+      height: rem(1);
+      background: $gold_gradation;
+      margin: rem(24) 0 0 0;
+    }
+
+    a {
+      width: fit-content;
+    }
+
+    .treatment_link {
+      width: rem(280);
+      margin: rem(40) 0 0 0;
+      padding: rem(10);
+      background-color: white;
+      box-shadow: 0 rem(4) rem(4) rgba(0, 0, 0, 0.1);
+
+      img {
+        width: rem(260);
+      }
+
+      p {
+        font-family: "Zen Old Mincho", "Noto Serif JP", "Yu Mincho", serif;
+        font-size: rem(16);
+        font-weight: 500;
+        line-height: 1.6;
+        text-align: center;
+        color: rgba(102, 102, 102, 1);
+      }
+    }
+  }
+
+  .treatment_content:nth-of-type(2) {
+    margin: 0 0 0 rem(220);
+  }
+
+  .treatment_content:nth-of-type(3),
+  .treatment_content:nth-of-type(4) {
+    .treatment_link_wrapper {
+      display: flex;
+      flex-shrink: 0;
+    }
+    
+    .treatment_link {
+      margin: 0;
+    }
+  }
+
+  .treatment_content:nth-of-type(3) {
+    width: rem(1000);
+
+    .treatment_link_wrapper {
+      column-gap: rem(80);
+      row-gap: rem(24);
+      flex-wrap: wrap;
+      margin: rem(74) 0 0 0;
+    }
+  }
+
+  .treatment_content:nth-of-type(3),
+  .treatment_content:nth-of-type(4) {
+    .treatment_link_wrapper {
+      display: flex;
+      flex-shrink: 0;
+    }
+  }
+
+  .treatment_content:nth-of-type(4) {
+    .treatment_link_wrapper {
+      width: rem(620);
+      margin: rem(40) 0 0 0;
+      column-gap: rem(60);
+    }
+  }
+}
+
+// 症例ページ
+
+
+
+// 当院について
+
+.main_about_clinic.main_treatment.main_price {
+
+  h2 {
+    display: static;
+    width: fit-content;
+  }
+
+  .about_clinic_content_wrapper { 
+    margin: rem(43) 0 0 0;
+    padding: rem(80) 0;
+    position: relative;
+  } 
+
+  .about_clinic_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/clinic_bg.png") top / cover no-repeat;
+    z-index: -1;
+  }
+
+  .about_clinic_content {
+    h3,p {
+      font-family: "Yu Mincho", "Noto Serif JP", serif;
+      line-height: 1.6;
+      letter-spacing: calc(rem(32) * .04);
+    }
+
+    h3 {
+      width: fit-content;
+      font-weight: 600;
+      font-size: rem(32);
+      margin: 0 auto;
+      background: $gold_gradation;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: rem(16);
+      margin: rem(24) 0 0 0;
+      color: rgba(102, 102, 102, 1);
+      text-align: center;
+    }
+  }
+
+  .about_clinic_content_wrapper:nth-of-type(3) {
+    > h3 {
+      width: fit-content;
+      font-size: rem(64);
+      font-weight: 200;
+      font-family: "cannia";
+      background: $gold_gradation;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: calc(rem(64) * .16);
+      margin: 0 auto;
+    }
+
+    > h4 {
+      width: fit-content;
+      font-size: rem(24);
+      font-family: "Noto Serif JP", "Yu Mincho", "游明朝体", serif;
+      font-weight: 400;
+      background: $gold_gradation;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: rem(16) auto 0;
+      letter-spacing: calc(rem(24) * .16);
+    }
+
+    .features_bar {
+      width: rem(80);
+      height: rem(1);
+      background: $gold_gradation;
+      margin: rem(16) auto 0 auto;
+    }
+
+    .about_clinic_content {
+      display: flex;
+      justify-content: center;
+      column-gap: rem(30);
+      margin: rem(64) 0 0 0;
+
+      h4 {
+        font-family: "Zen Old Mincho", "Yu Mincho", serif;
+        font-weight: rem(700);
+        font-size: rem(20);
+        line-height: 1.7;
+        color: rgba(173, 127, 82, 1);
+        text-align: center;
+      }
+    }
+
+    > p {
+      font-family: "Yu Mincho", "Noto Serif JP", serif;
+      line-height: 1.6;
+      letter-spacing: calc(rem(32) * .04);
+      font-weight: 500;
+      font-size: rem(16);
+      margin: rem(24) 0 0 0;
+      color: rgba(102, 102, 102, 1);
+      text-align: center;
+    }
+  }
+}
+
+// 症例一覧ページ
+
+.main_case {
+  padding: rem(80) 0 0 0;
+
+  .case_content_wrapper {
+    display: block;
+    padding: clamp_vw(80) 0 clamp_vw(167) 0;
+
+    .case_content_title {
+      display: flex;
+      align-items: center;
+      width: clamp_vw(200);
+      margin: 0 auto;
+      column-gap: clamp_vw(24);
+
+      img {
+        width: clamp_vw(54);
+        height: clamp_vw(20);
+      }
+
+      img:nth-of-type(2) {
+        transform: scale(-1,1);
+      }
+
+      h3 {
+        width: fit-content;
+        font-family: "Yu Mincho", "Noto Serif JP", serif;
+        font-size: clamp_vw(32);
+        font-weight: 600;
+        letter-spacing: clamp_vw(32 * .04);
+        background: $gold_gradation;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .case_link_wrapper {
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      flex-wrap: wrap;
+      row-gap: clamp_vw(40);
+    }
+
+    .case_link.case_top_content {
+      padding: 0;
+      background: transparent;
+
+      .case_content_text.case_top_content_text {
+        height: clamp_vw(45);
+        margin: clamp_vw(20) 0 0 0;
+      } 
+    }
+
+    .case_content_pagenation {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: clamp_vw(20);
+      width: clamp_vw(188);
+      margin: clamp_vw(80) auto 0;
+
+      > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(173, 127, 82, 1);
+        font-size: clamp_vw(20);
+        letter-spacing: clamp_vw(20 * .04);
+        cursor: pointer;
+        font-family: "cannia", sans-serif;
+        font-weight: 400;
+        line-height: 1;  
+      }
+
+      .active,
+      .next {
+        width: clamp_vw(40);
+        height: clamp_vw(40);
+        color: white;
+        background-color: rgba(173, 127, 82, 1);
+        border-radius: 50%;
+        font-size: clamp_vw(18);
+        letter-spacing: clamp_vw(18 * .05);
+      }
+
+      .next {
+        width: clamp_vw(68);
+        height: clamp_vw(30);
+        border-radius: 9999px;
+      }
+    }
+
+  }
+
+  .case_link_img.case_top_content_img {
+    width: clamp_vw(240);
+    height: clamp_vw(282);
+
+    > div:nth-of-type(2) {
+      background-color: rgba(247, 247, 247, 1);
+    }
+  }
+}
+
+// 症例紹介ページ
+
+.main_about_case {
+  .about_case_bg {
+    width: 100%;
+    height: clamp_vw(80);
+    background: url("../img/content_bg_origin.jpg") center / cover no-repeat;
+    opacity: .3;
+    margin: clamp_vw(80) 0 0 0;
+  }
+
+  .about_case_content_wrapper {
+    width: clamp_vw(1000);
+    padding: clamp_vw(80) 0;
+    margin: 0 auto;
+    font-family: "Yu Mincho", "Noto Serif JP", serif;
+    line-height: 1;
+
+    h3 {
+      font-size: clamp_vw(36);
+      font-weight: 600;
+      background: $gold_gradation;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .about_case_border {
+      width: 100%;
+      height: clamp_vw(1);
+      background: $gold_gradation;
+      margin: clamp_vw(8) 0 0 0;
+    }
+
+    .about_case_img_wrapper {
+      width: clamp_vw(440);
+
+      .about_case_img {
+        width: 100%;
+        height: clamp_vw(494);
+
+        > div {
+          height: clamp_vw(246);
+          color: rgba(102, 102, 102, 1);
+
+          p {
+            font-size: clamp_vw(24.6);
+            margin: 0 0 clamp_vw(19) 0;
+          }
+        }
+      }
+
+      .about_case_pagenation {
+        width: clamp_vw(355);
+        height: clamp_vw(80);
+        position: relative;
+        margin: 0 auto;
+
+        .prev,
+        .next {
+          top: clamp_vw(20);
+        }
+
+        .prev {
+          left: 0;
+        }
+
+        .next {
+          right: 0;
+        }
+
+        .page_dots {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: clamp_vw(75);
+          height: clamp_vw(15);
+          margin: auto;
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+
+          div {
+            border-radius: 50%;
+          }
+
+          div:nth-of-type(1) {
+            width: clamp_vw(15);
+            height: clamp_vw(15);
+            background: rgba(175, 148, 84, 1);
+          }
+
+          div:nth-of-type(2),
+          div:nth-of-type(3) {
+            width: clamp_vw(10);
+            height: clamp_vw(10);
+            background-color: rgba(217, 217, 217, 1);
+          }
+        }
+      }
+    }
+
+    .about_case_content {
+      display: flex;
+      justify-content: space-between;
+      margin: clamp_vw(40) 0 0 0;
+
+      .about_case_text_wrapper {
+        width: clamp_vw(440);
+        font-family: "Yu Mincho", "Noto Serif JP", serif;
+      }
+
+      .about_case_text {
+        line-height: 1;
+        font-weight: 500;
+        padding: clamp_vw(5) 0;
+
+        h4 {
+          font-size: clamp_vw(14);
+          color: rgba(175, 175, 175, 1);
+          line-height: calc(20 / 14);
+          letter-spacing: clamp_vw(14 * .05);
+        }
+
+        p {
+          font-size: clamp_vw(16);
+          color: rgba(102, 102, 102, 1);
+          line-height: calc(24 / 16);
+          letter-spacing: clamp_vw(16 * .05);
+        }
+      }
+
+      .about_case_border {
+        background: rgba(175, 148, 84, 1);
+        margin: 0;
+      }
+
+      .about_case_text:not(:nth-of-type(1)) {
+        margin: clamp_vw(16) 0 0 0;
+      }
+    }
+  }
+}
+
+.content_brown_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: clamp_vw(10);
+  width: clamp_vw(420);
+  height: clamp_vw(64);
+  margin: clamp_vw(40) auto 0;
+  background-color: rgba(192, 157, 123, 1);
+  border: rem(1) rgba(173, 127, 82, 1) solid;
+  color: white;
+
+  img {
+    width: clamp_vw(26);
+    margin: 0;
+    transform: rotate(180deg);
+  }
+}
+
+// クリニック案内
+
+.main_clinic {
+  .clinic_header_wrapper {
+    background-image: none;
+    position: relative;
+
+    .clinic_header_bg {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: clamp_vw(208);
+      background: url("../img/content_bg_origin.jpg") center / cover no-repeat;
+      opacity: 30%;
+    }
+
+  }
+
+  .clinic_header_content {
+    .clinic_link {
+      margin: 0;
+
+      a {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .clinic_content_bg {
+    background-color: rgba(255, 249, 245, 1);
+  }
+
+  .clinic_content_wrapper {
+    width: clamp_vw(1000);
+    margin: 0 auto;
+    padding: clamp_vw(80) 0;
+
+    .clinic_content_title {
+      margin: 0;
+    }
+
+    .clinic_content {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: clamp_vw(66) 0 0 0;
+      font-family: "Yu Mincho", "Noto Serif JP", serif;
+      line-height: 1;
+
+      > img {
+        display: block;
+        width: clamp_vw(500);
+        border-radius: clamp_vw(10);
+      }
+
+      .clinic_content_text_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: clamp_vw(405);
+      }
+
+      .clinic_content_text {
+        width: clamp_vw(420);
+
+        h4 {
+          font-weight: 600;
+          font-size: clamp_vw(18);
+          letter-spacing: clamp_vw(18 * .16);
+          color: rgba(173, 127, 82, 1);
+        }
+
+        p {
+          margin: clamp_vw(16) 0 0 0;
+          font-weight: 500;
+          font-size: clamp_vw(16);
+          letter-spacing: clamp_vw(16 * .16);
+          color: rgba(102, 102, 102, 1);
+        }
+      }
+
+      .content_brown_button {
+
+        > img {
+          transform: none;
+        }
+      }
+    }
+  }
+}
+
+// 施術の流れ
+
+.main_flow {
+  padding: clamp_vw(60) 0 0 0;
+
+  .flow_content_wrapper {
+    position: relative;
+    margin: clamp_vw(80) 0 0 0;
+    padding: clamp_vw(80) 0;
+  }
+
+  .flow_content_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: clamp_vw(1440);
+    height: 100%;
+    background: url("../img/content_bg_origin.jpg") center / cover no-repeat;
+    opacity: 30%;
+    z-index: -1;
+  }
+
+  .flow_content_bgcolor {
+    width: clamp_vw(1000);
+    margin: 0 auto;
+    padding: clamp_vw(40) clamp_vw(80);
+    background-color: white;
+  }
+
+  .flow_content {
+    display: flex;
+    width: clamp_vw(1000);
+    column-gap: clamp_vw(48);
+
+    .flow_content_img {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: clamp_vw(200);
+        height: clamp_vw(200);
+        border: clamp_vw(1) solid rgba(192, 157, 123, 1);
+        margin: auto 0;  
+        object-fit: cover;
+        box-shadow: 0 clamp_vw(4) clamp_vw(4) rgba(0, 0, 0, 0.05);
+        background-color: rgba(217, 217, 217, 1);
+      }
+    }
+
+    .flow_content_text {
+      width: clamp_vw(650);
+      line-height: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: clamp_vw(24);
+
+      h3 {
+        font-family: "cannia", sans-serif;
+        font-size: clamp_vw(18);
+        font-weight: 400;
+        letter-spacing: clamp_vw(18 * .08);
+        color: rgba(173, 127, 82, 1);
+      }
+
+      h4 {
+        font-family: "Noto Serif JP", "Yu Mincho", serif;
+        font-weight: 500;
+        font-size: clamp_vw(24);
+        color: rgba(102, 102, 102, 1);
+      }
+
+      p {
+        font-family: "Yu Mincho", "Noto Serif JP", serif;
+        font-size: clamp_vw(16);
+        font-weight: 500;
+        line-height: calc(32 / 16);
+        color: rgba(102, 102, 102, 1);
+      }
+
+      a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: fit-content;
+        height: clamp_vw(60);
+        border: clamp_vw(1) solid rgba(175, 148, 84, 1);
+        border-radius: 9999px;
+        font-family: "Yu Mincho", "Noto Serif JP", serif;
+        font-weight: 500;
+        font-size: clamp_vw(16);
+        letter-spacing: clamp_vw(16 * .01);
+        color: rgba(175, 148, 84, 1);
+
+        > div {
+          display: flex;
+          width: fit-content;
+          align-items: center;
+          column-gap: clamp_vw(11);
+          padding: 0 clamp_vw(16);
+          line-height: 1;
+
+          div {
+            width: clamp_vw(4);
+            height: clamp_vw(10);
+            background-color: rgba(175, 148, 84, 1);
+            clip-path: polygon(15% 5%, 100% 50%, 15% 95%);
+          }
+        }
+      }
+    }
+  }
+
+  .flow_polygon {
+    width: clamp_vw(30);
+    height: clamp_vw(24);
+    clip-path: polygon(0 calc((2 / 30) * 100%), 100% calc((2 / 30) * 100%), 50% 100%);
+    background-color: rgba(175, 148, 84, 1);
+    margin: clamp_vw(20) auto;
+  }
+}
+
+// アフターケアページ
+
+.main_aftercare {
+  padding: clamp_vw(80) 0 0 0;
+
+  .aftercare_content_wrapper {
+    position: relative;
+    margin: clamp_vw(80) 0 0 0;
+    padding: clamp_vw(80) 0;
+  }
+
+  .aftercare_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/content_bg_origin.jpg") center / cover no-repeat;
+    opacity: 30%;
+    z-index: -1;
+  }
+
+  .aftercare_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: clamp_vw(1000);
+    margin: 0 auto;
+
+    img {
+      display: block;
+      width: clamp_vw(480);
+      height: clamp_vw(360);
+      background-color: rgba(217, 217, 217, 1);
+      border-radius: clamp_vw(10);
+    }
+
+    .aftercare_content_text {
+      width: clamp_vw(440);
+
+      h3,p {
+        font-weight: 500;
+        line-height: 1.6;
+      }
+
+      h3 {
+        font-family: "Zen Old Mincho", "Noto Serif JP", serif;
+        font-size: clamp_vw(24);
+        color: rgba(173, 127, 82, 1);
+      }
+
+      .aftercare_border {
+        width: clamp_vw(80);
+        height: clamp_vw(1);
+        background: $gold_gradation;
+        margin: clamp_vw(8) 0 0 0;
+      }
+
+      p {
+        font-family: "Yu Mincho", "Noto Serif JP", serif;
+        font-size: clamp_vw(16);
+        color: rgba(102, 102, 102, 1);
+        margin: clamp_vw(24) 0 0 0;
+      }
+    }
+  }
+
+  .aftercare_content_wrapper:nth-of-type(3) {
+
+    .aftercare_content {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+// よくある質問ページ
+
+.main_faq {
+  padding: clamp_vw(80) 0 0 0;
+
+  .main_faq_bg {
+    width: 100%;
+    height: clamp_vw(80);
+    background: url("../img/content_bg_origin.jpg") center / cover no-repeat;
+    margin: clamp_vw(80) 0 0 0;
+    opacity: 30%;
+  }
+
+  .faq_content_wrapper {
+    padding: clamp_vw(80) 0 0 0;
+  }
+
+  .faq_content {
+    width: clamp_vw(1000);
+    margin: 0 auto clamp_vw(24);
+
+    .question,
+    .answer {
+      display: flex;
+      justify-content: space-between;
+      border-radius: clamp_vw(10);
+
+      .circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: clamp_vw(36);
+        height: clamp_vw(36);
+        font-family: "cannia", sans-serif;
+        font-size: clamp_vw(16);
+        font-weight: 400;
+        line-height: calc(18 / 16);
+        letter-spacing: 0;
+        border-radius: 50%;
+      }
+
+      p {
+        font-family: "Yu Mincho", "Noto Serif JP", serif;
+        font-weight: 500;
+        color: rgba(102, 102, 102, 1);
+      }
+    }
+
+    .question {
+      padding: clamp_vw(16) clamp_vw(24);
+      background-color: rgba(247, 247, 247, 1);
+      align-items: center;
+      cursor: pointer;
+    
+      .circle {
+        background-color: rgba(173, 127, 82, 1);
+        color: white;
+      }
+
+      p {
+        width: clamp_vw(852);
+        font-size: clamp_vw(16);
+        line-height: 1.7;
+      }
+
+      .toggle_button {
+        width: clamp_vw(27);
+        height: clamp_vw(27);
+        opacity: 1;
+        transition-duration: 600ms;
+        position: relative;
+
+        &::before {
+          content: "";
+          display: block;
+          width: clamp_vw(16);
+          height: clamp_vw(2);
+          background-color: rgba(173, 127, 82, 1);
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto 0;
+        }
+      }
+
+      .toggle_button.close {
+        opacity: 0;
+      }
+    }
+
+    .answer_wrapper {
+      display: flex;
+      flex-direction: column;
+      transform-origin: top;
+      transition: display 500ms ease, transform 500ms ease-out, opacity 500ms ease-out, max-height 500ms ease-out;
+      transition-behavior: allow-discrete;
+      transform: scaleY(1);
+      max-height: 999px;
+      opacity: 1;
+
+      @starting-style {
+        max-height: 0;
+        transform: scaleY(0);
+        opacity: 0;
+      }
+      
+    }
+
+    .answer_wrapper.close {
+      display: none;
+      max-height: 0;
+      transform: scaleY(0);
+      opacity: 0;
+
+      @starting-style {
+        max-height: 9999px;
+        transform: scaleY(1);
+        opacity: 1;
+      }
+    }
+
+    .answer {
+      margin: clamp_vw(24) 0 0 0;
+      padding: 0 clamp_vw(26);
+      
+      .circle {
+        border: clamp_vw(.5) solid rgba(173, 127, 82, 1);
+        color: rgba(173, 127, 82, 1);
+        flex-shrink: 0;
+      }
+
+      p {
+        width: clamp_vw(888);
+        font-size: clamp_vw(14);
+        letter-spacing: clamp_vw(14 * .04);
+      }
+    }
+
+    .faq_link {
+      margin: clamp_vw(36) 0 0 0;
+      justify-content: center;
+
+      a {
+        column-gap: clamp_vw(24);
+      }
+
+      .price_arrow {
+        position: relative;
+        left: auto;
+      }
+    }    
+  }
+}
+
+// 医師紹介ページ
+
+.main_doctor {
+  padding: clamp_vw(80) 0 0 0;
+
+  .doctor_content_wrapper {
+    position: relative;
+    margin: clamp_vw(80) 0 0 0;
+    padding: clamp_vw(105) 0 clamp_vw(170) 0;
+  }
+
+  .doctor_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/content_bg_origin.jpg") center / cover transparent;
+    opacity: .3;
+    z-index: -1;
+  }
+
+  .doctor_content {
+    width: clamp_vw(1023);
+    margin: 0 auto;
+    padding: clamp_vw(40);
+    background-color: white;
+
+    h3 {
+      width: fit-content;
+      font-family: "Noto Serif JP", "Yu Mincho", serif;
+      font-weight: 800;
+      font-size: clamp_vw(24);
+      line-height: 1.7;
+      background: $gold_gradation;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    h4 {
+      font-family: "Yu Mincho", "Noto Serif JP", serif;
+      font-weight: 500;
+      font-size: clamp_vw(16);
+      line-height: 1;
+      color: #CCCCCC;
+      margin: clamp_vw(24) 0 0 0;
+    }
+
+    p {
+
+      span {
+        font-family: "Yu Mincho", "Noto Serif JP", serif;
+        font-size: clamp_vw(36);
+        font-weight: 600;
+        line-height: 1.6;
+        letter-spacing: 0;
+        color: #666666;
+      }
+    }
+
+    .doctor_border {
+      display: inline-block;
+      width: clamp_vw(80);
+      height: clamp_vw(2);
+      background: $gold_gradation;
+    }
+  }
+}
